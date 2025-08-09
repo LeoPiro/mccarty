@@ -1,0 +1,24 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#0a0a0a'/>
+      <stop offset='60%' stop-color='#1f1f1f'/>
+      <stop offset='100%' stop-color='#3a3a3a'/>
+    </linearGradient>
+    <linearGradient id='accent' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#6366f1' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#14b8a6' stop-opacity='0.6'/>
+    </linearGradient>
+    <pattern id='grid' width='80' height='80' patternUnits='userSpaceOnUse'>
+      <path d='M80 0H0V80' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/>
+    </pattern>
+  </defs>
+  <rect width='1920' height='1080' fill='url(#g)'/>
+  <rect width='1920' height='1080' fill='url(#grid)'/>
+  <g filter='url(#f)'>
+    <circle cx='1600' cy='200' r='340' fill='url(#accent)' opacity='0.35'/>
+    <circle cx='400' cy='880' r='300' fill='url(#accent)' opacity='0.25'/>
+  </g>
+  <text x='50%' y='50%' fill='white' font-family='"Segoe UI",Arial,sans-serif' font-size='72' font-weight='600' text-anchor='middle' dominant-baseline='middle' opacity='0.9'>McCarty</text>
+  <text x='50%' y='58%' fill='white' font-family='"Segoe UI",Arial,sans-serif' font-size='26' font-weight='400' text-anchor='middle' dominant-baseline='middle' opacity='0.65'>Placeholder Hero Image</text>
+</svg>
