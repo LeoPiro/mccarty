@@ -5,11 +5,13 @@ import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { ProjectGallery } from "../../components/project-gallery";
 
+interface ProjectPageParams { slug: string }
+
 export function generateStaticParams() {
   return projects.map(p => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: any) {
+export async function generateMetadata({ params }: { params: ProjectPageParams }) {
   const project = projects.find(p => p.slug === params.slug);
   if (!project) return {};
   const desc = project.excerpt || `Project ${project.name} by McCarty Companies.`;
@@ -30,7 +32,7 @@ export async function generateMetadata({ params }: any) {
   };
 }
 
-export default function ProjectDetail({ params }: any) {
+export default function ProjectDetail({ params }: { params: ProjectPageParams }) {
   const project = projects.find(p => p.slug === params.slug);
   if (!project) return notFound();
   return (
