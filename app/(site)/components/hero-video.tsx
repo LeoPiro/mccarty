@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 
 export function HeroVideo() {
   const reduce = useReducedMotion();
@@ -27,9 +28,11 @@ export function HeroVideo() {
           onError={() => setVideoError(true)}
         />
       ) : (
-        <img
+        <Image
           src={poster}
           alt="McCarty Companies hero placeholder"
+          fill
+          priority
           className="absolute inset-0 h-full w-full object-cover"
         />
       )}

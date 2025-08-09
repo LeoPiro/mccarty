@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 export function Footer() {
   return (
     <footer className="mt-32 border-t bg-neutral-950 text-neutral-300">
@@ -10,9 +11,9 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold tracking-wide uppercase mb-3 text-neutral-400">Navigate</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/projects" className="hover:underline">Projects</a></li>
-            <li><a href="#capabilities" className="hover:underline">Capabilities</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
+            <li><Link href="/projects" className="hover:underline">Projects</Link></li>
+            <li><Link href="#capabilities" className="hover:underline">Capabilities</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
         <div>
