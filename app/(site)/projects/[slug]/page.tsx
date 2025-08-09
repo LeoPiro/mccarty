@@ -9,7 +9,28 @@ export function generateStaticParams() {
   return projects.map(p => ({ slug: p.slug }));
 }
 
-export default function ProjectDetail({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: any) {
+  const project = projects.find(p => p.slug === params.slug);
+  if (!project) return {};
+  const desc = project.excerpt || `Project ${project.name} by McCarty Companies.`;
+  return {
+    title: `${project.name} | McCarty Companies`,
+    description: desc,
+    openGraph: {
+      title: project.name,
+      description: desc,
+      images: [{ url: project.coverImage }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.name,
+      description: desc,
+      images: [project.coverImage]
+    }
+  };
+}
+
+export default function ProjectDetail({ params }: any) {
   const project = projects.find(p => p.slug === params.slug);
   if (!project) return notFound();
   return (
