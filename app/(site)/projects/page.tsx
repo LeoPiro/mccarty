@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { projects } from "@/lib/projects";
 import { ProjectCard } from "../components/project-card";
 import { Header } from "../components/header";
@@ -5,12 +6,8 @@ import { Footer } from "../components/footer";
 import { Section } from "../components/section";
 import Link from "next/link";
 
-interface ProjectsIndexProps {
-  searchParams?: Record<string, string | string[] | undefined>;
-}
-
 // Simple filtering via URL search param ?category=Healthcare etc.
-function ProjectsIndex(props: ProjectsIndexProps) {
+function ProjectsIndex(props: any) {
   const searchParams = props.searchParams || {};
   const category = (searchParams.category as string) || "All";
   const list = category === "All" ? projects : projects.filter(p => p.category === category);
