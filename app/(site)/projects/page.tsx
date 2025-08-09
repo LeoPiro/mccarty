@@ -6,7 +6,8 @@ import { Section } from "../components/section";
 import Link from "next/link";
 
 // Simple filtering via URL search param ?category=Healthcare etc.
-export default function ProjectsIndex({ searchParams }: { searchParams: { [k: string]: string | string[] | undefined } }) {
+export default function ProjectsIndex(props: any) {
+  const { searchParams = {} } = props;
   const category = (searchParams.category as string) || "All";
   const list = category === "All" ? projects : projects.filter(p => p.category === category);
   const categories = ["All", ...Array.from(new Set(projects.map(p => p.category)))];
