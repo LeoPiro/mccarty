@@ -5,9 +5,13 @@ import { Footer } from "../components/footer";
 import { Section } from "../components/section";
 import Link from "next/link";
 
+interface ProjectsIndexProps {
+  searchParams?: Record<string, string | string[] | undefined>;
+}
+
 // Simple filtering via URL search param ?category=Healthcare etc.
-export default function ProjectsIndex(props: any) {
-  const { searchParams = {} } = props;
+function ProjectsIndex(props: ProjectsIndexProps) {
+  const searchParams = props.searchParams || {};
   const category = (searchParams.category as string) || "All";
   const list = category === "All" ? projects : projects.filter(p => p.category === category);
   const categories = ["All", ...Array.from(new Set(projects.map(p => p.category)))];
@@ -39,3 +43,4 @@ export default function ProjectsIndex(props: any) {
     </>
   );
 }
+export default ProjectsIndex;
