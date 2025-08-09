@@ -1,103 +1,89 @@
+import { HeroVideo } from "./(site)/components/hero-video";
+import { ProofCounters } from "./(site)/components/proof-counters";
+import { CapabilityCard } from "./(site)/components/capability-card";
+import { ReviewCarousel } from "./(site)/components/review-carousel";
+import { Header } from "./(site)/components/header";
+import { Footer } from "./(site)/components/footer";
+import { Section } from "./(site)/components/section";
+import { projects } from "@/lib/projects";
+import { HardHat, Building2, ClipboardList, Wrench, Users2 } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const capabilityData = [
+    { icon: <HardHat className="h-8 w-8" />, title: "Preconstruction", body: "Early cost + constructability insight to de-risk delivery and optimize value." },
+    { icon: <Building2 className="h-8 w-8" />, title: "Project Management", body: "Schedule, budget, quality, and stakeholder coordination executed with precision." },
+    { icon: <ClipboardList className="h-8 w-8" />, title: "Procurement", body: "Strategic trade partner alignment and material lead‑time mitigation." },
+    { icon: <Wrench className="h-8 w-8" />, title: "Field Execution", body: "Safety-led site operations driving predictable progress and quality." },
+    { icon: <Users2 className="h-8 w-8" />, title: "Client Service", body: "Transparent communication and proactive issue resolution from day one." },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  const featured = projects.slice(0, 3);
+
+  return (
+    <>
+      <Header />
+      <main className="pt-16">
+        <HeroVideo />
+
+        <Section id="capabilities" title="Capabilities" subtitle="Full lifecycle delivery grounded in transparency and technical rigor.">
+          <div className="grid gap-6 md:grid-cols-3">
+            {capabilityData.map((c, i) => (
+              <CapabilityCard key={c.title} icon={c.icon} title={c.title} index={i}>{c.body}</CapabilityCard>
+            ))}
+          </div>
+        </Section>
+
+        <ProofCounters />
+
+        <Section title="Featured Projects" subtitle="Select work demonstrating market range and delivery discipline.">
+          <div className="grid gap-6 md:grid-cols-3">
+            {featured.map((p, i) => (
+              <div key={p.slug} className="flex flex-col">
+                {/* Reuse project card minimal inline to avoid import loop; could also import ProjectCard */}
+                {/* Simplified preview */}
+                <Link href={`/projects/${p.slug}`} className="group rounded-lg overflow-hidden border bg-white shadow-sm hover:shadow-md transition-shadow">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={p.coverImage}
+                      alt={p.name + " project cover"}
+                      fill
+                      sizes="(min-width:768px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      priority={true}
+                    />
+                    <div className="absolute inset-0 bg-neutral-900/10" />
+                  </div>
+                  <div className="p-5">
+                    <div className="text-xs font-medium tracking-wide uppercase text-neutral-500">{p.category}</div>
+                    <h3 className="mt-1 text-lg font-semibold group-hover:underline underline-offset-4">{p.name}</h3>
+                    <p className="mt-2 text-sm text-neutral-600 line-clamp-3">{p.excerpt}</p>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Link href="/projects" className="text-sm font-medium underline">View all projects →</Link>
+          </div>
+        </Section>
+
+        <Section title="Client Feedback" subtitle="Relationships built on delivery, communication, and trust.">
+          <ReviewCarousel />
+        </Section>
+
+        <section className="mx-auto max-w-6xl px-6 py-24">
+          <div className="rounded-2xl bg-neutral-900 text-white p-12 md:p-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-semibold text-balance">Ready to start your project?</h2>
+              <p className="mt-4 text-neutral-300 max-w-xl">Engage a team focused on clarity, accountability, and outcomes.</p>
+            </div>
+            <Link href="/contact" className="self-start rounded-md bg-white text-neutral-900 px-6 py-3 font-medium text-sm">Let’s Talk</Link>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <Footer />
+    </>
   );
 }
