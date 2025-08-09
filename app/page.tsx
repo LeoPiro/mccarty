@@ -39,7 +39,7 @@ export default function Home() {
 
         <Section title="Featured Projects" subtitle="Select work demonstrating market range and delivery discipline.">
           <div className="grid gap-6 md:grid-cols-3">
-            {featured.map((p, i) => (
+            {featured.map(p => (
               <div key={p.slug} className="flex flex-col">
                 {/* Reuse project card minimal inline to avoid import loop; could also import ProjectCard */}
                 {/* Simplified preview */}
