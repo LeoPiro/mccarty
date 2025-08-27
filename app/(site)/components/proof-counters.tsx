@@ -6,7 +6,7 @@ function useCountTo(target: number, start: boolean) {
   const [val, setVal] = useState(0);
   useEffect(() => {
     if (!start) return;
-    const duration = 1200;
+    const duration = 1800;
     const startTs = performance.now();
     const step = (now: number) => {
       const p = Math.min(1, (now - startTs) / duration);
@@ -31,11 +31,13 @@ export function ProofCounters() {
     { label: "Sq Ft Delivered", value: b.toLocaleString() },
     { label: "On‑time Delivery", value: `${c}%` },
     { label: "Recordable Incidents", value: d },
+    { label: "Projects Completed", value: "500+" },
+    { label: "Client Satisfaction", value: "99%" },
   ];
 
   return (
-    <section ref={ref} className="mx-auto max-w-6xl px-6 py-20">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div ref={ref}>
+      <div className="grid grid-cols-3 gap-8 gap-y-12 text-center">
         {items.map((item, i) => (
           <motion.div
             key={item.label}
@@ -43,13 +45,15 @@ export function ProofCounters() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="text-center"
+            className="flex flex-col items-center justify-center"
           >
-            <div className="text-3xl md:text-4xl font-semibold">{item.value}</div>
-            <div className="mt-2 text-sm opacity-70">{item.label}</div>
+            <div className="text-2xl md:text-3xl font-semibold text-neutral-800 text-center w-full min-h-[2.5rem] flex items-center justify-center font-mono">
+              {item.value}
+            </div>
+            <div className="mt-2 text-xs text-neutral-500 leading-tight text-center w-full">{item.label}</div>
           </motion.div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

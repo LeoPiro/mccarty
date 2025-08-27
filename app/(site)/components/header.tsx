@@ -1,23 +1,32 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const nav = [
-	{ href: "/projects", label: "Projects" },
-	{ href: "#capabilities", label: "Capabilities" },
-	{ href: "/contact", label: "Contact" },
+	{ href: "/#services", label: "Services" },
+	{ href: "/projects", label: "Our Work" },
+	{ href: "/about", label: "About Us" },
 ];
 
 export function Header() {
 	const [open, setOpen] = useState(false);
 	return (
-		<header className="fixed top-0 inset-x-0 z-40 bg-white/80 backdrop-blur border-b">
-			<div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+		<header className="fixed top-0 inset-x-0 z-40 bg-white border-b border-neutral-200">
+			<div className="mx-auto max-w-6xl px-6 h-20 flex items-center justify-between">
 				<Link
 					href="/"
-					className="font-semibold tracking-tight text-lg"
+					className="flex items-center"
 				>
-					McCarty Companies
+					<div className="bg-white rounded-lg p-2">
+						<Image
+							src="/mccarty-logo.jpg"
+							alt="McCarty Companies Logo"
+							width={220}
+							height={55}
+							className="h-14 w-auto"
+						/>
+					</div>
 				</Link>
 				<nav className="hidden md:flex items-center gap-8 text-sm">
 					{nav.map((i) => (
