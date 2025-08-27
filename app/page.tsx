@@ -6,7 +6,7 @@ import { Header } from "./(site)/components/header";
 import { Footer } from "./(site)/components/footer";
 import { Section } from "./(site)/components/section";
 import { projects } from "@/lib/projects";
-import { HardHat, Building2, ClipboardList, Wrench, Users2 } from "lucide-react";
+import { HardHat, Building2, ClipboardList, Wrench, Users2, Map } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,6 +17,7 @@ export default function Home() {
     { icon: <ClipboardList className="h-8 w-8" />, title: "Procurement", body: "Strategic trade partner alignment and material lead‑time mitigation." },
     { icon: <Wrench className="h-8 w-8" />, title: "Field Execution", body: "Safety-led site operations driving predictable progress and quality." },
     { icon: <Users2 className="h-8 w-8" />, title: "Client Service", body: "Transparent communication and proactive issue resolution from day one." },
+    { icon: <Map className="h-8 w-8" />, title: "Site Development", body: "Comprehensive civil engineering solutions including grading, drainage, utilities, and infrastructure design." },
   ];
 
   const featured = projects.slice(0, 3);
@@ -28,20 +29,24 @@ export default function Home() {
         <HeroVideo />
 
         <Section id="services" title="Services" subtitle="Full lifecycle delivery grounded in transparency and technical rigor.">
-          <div className="grid gap-6 md:grid-cols-3">
-            {capabilityData.map((c, i) => (
-              <ServiceCard key={c.title} icon={c.icon} title={c.title} index={i}>{c.body}</ServiceCard>
-            ))}
+          <div className="flex flex-col lg:flex-row gap-12">
+            {/* Services Grid - Left Side */}
+            <div className="flex-1">
+              <div className="grid gap-6 md:grid-cols-2">
+                {capabilityData.map((c, i) => (
+                  <ServiceCard key={c.title} icon={c.icon} title={c.title} index={i}>{c.body}</ServiceCard>
+                ))}
+              </div>
+            </div>
+            
+            {/* Proof Counters - Right Side */}
+            <div className="lg:w-[28rem] lg:flex-shrink-0 lg:self-center">
+              <div className="bg-neutral-50 rounded-xl py-16 px-12 border border-neutral-200">
+                <ProofCounters />
+              </div>
+            </div>
           </div>
         </Section>
-
-        <Section id="about" title="About Us" subtitle="Building excellence through experience and innovation.">
-          <div className="text-center text-neutral-600">
-            <p>Content coming soon...</p>
-          </div>
-        </Section>
-
-        <ProofCounters />
 
         <Section title="Featured Projects" subtitle="Select work demonstrating market range and delivery discipline.">
           <div className="grid gap-6 md:grid-cols-3">
@@ -72,6 +77,12 @@ export default function Home() {
           </div>
           <div className="mt-8">
             <Link href="/projects" className="text-sm font-medium underline">View all projects →</Link>
+          </div>
+        </Section>
+
+        <Section id="about" title="About Us" subtitle="Building excellence through experience and innovation.">
+          <div className="text-center text-neutral-600">
+            <p>Content coming soon...</p>
           </div>
         </Section>
 
