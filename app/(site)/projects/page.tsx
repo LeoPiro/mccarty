@@ -7,6 +7,9 @@ import { Section } from "../components/section";
 import Link from "next/link";
 import { Suspense } from "react";
 
+// Force dynamic rendering since this page uses searchParams
+export const dynamic = 'force-dynamic';
+
 // Loading component
 function ProjectsLoading() {
   return (

@@ -8,6 +8,9 @@ import { FeaturedProject } from "./(site)/components/featured-project";
 import { HardHat, Building2, ClipboardList, Wrench, Users2, Map } from "lucide-react";
 import Link from "next/link";
 
+// Force dynamic rendering to avoid clientReferenceManifest error
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
   const capabilityData = [
     { 
