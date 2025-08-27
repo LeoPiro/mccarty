@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 
 const nav = [
-	{ href: "/projects", label: "Projects" },
 	{ href: "/#services", label: "Services" },
+	{ href: "/projects", label: "Our Work" },
 	{ href: "/#about", label: "About Us" },
 ];
 

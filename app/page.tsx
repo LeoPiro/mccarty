@@ -1,6 +1,7 @@
 import { HeroVideo } from "./(site)/components/hero-video";
-import { ProofCounters } from "./(site)/components/proof-counters";
+import { HeresHowSection } from "./(site)/components/heres-how-section";
 import { ServiceCard } from "./(site)/components/service-card";
+import { ServicesOverlay } from "./(site)/components/services-overlay";
 import { ReviewCarousel } from "./(site)/components/review-carousel";
 import { Header } from "./(site)/components/header";
 import { Footer } from "./(site)/components/footer";
@@ -12,12 +13,42 @@ import Image from "next/image";
 
 export default function Home() {
   const capabilityData = [
-    { icon: <HardHat className="h-8 w-8" />, title: "Preconstruction", body: "Early cost + constructability insight to de-risk delivery and optimize value." },
-    { icon: <Building2 className="h-8 w-8" />, title: "Project Management", body: "Schedule, budget, quality, and stakeholder coordination executed with precision." },
-    { icon: <ClipboardList className="h-8 w-8" />, title: "Procurement", body: "Strategic trade partner alignment and material lead‑time mitigation." },
-    { icon: <Wrench className="h-8 w-8" />, title: "Field Execution", body: "Safety-led site operations driving predictable progress and quality." },
-    { icon: <Users2 className="h-8 w-8" />, title: "Client Service", body: "Transparent communication and proactive issue resolution from day one." },
-    { icon: <Map className="h-8 w-8" />, title: "Site Development", body: "Comprehensive civil engineering solutions including grading, drainage, utilities, and infrastructure design." },
+    { 
+      icon: <HardHat className="h-8 w-8" />, 
+      title: "Preconstruction", 
+      body: "Early cost + constructability insight to de-risk delivery and optimize value.",
+      backgroundImage: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    { 
+      icon: <Building2 className="h-8 w-8" />, 
+      title: "Project Management", 
+      body: "Schedule, budget, quality, and stakeholder coordination executed with precision.",
+      backgroundImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    { 
+      icon: <ClipboardList className="h-8 w-8" />, 
+      title: "Procurement", 
+      body: "Strategic trade partner alignment and material lead‑time mitigation.",
+      backgroundImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    { 
+      icon: <Wrench className="h-8 w-8" />, 
+      title: "Field Execution", 
+      body: "Safety-led site operations driving predictable progress and quality.",
+      backgroundImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    { 
+      icon: <Users2 className="h-8 w-8" />, 
+      title: "Client Service", 
+      body: "Transparent communication and proactive issue resolution from day one.",
+      backgroundImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    { 
+      icon: <Map className="h-8 w-8" />, 
+      title: "Site Development", 
+      body: "Comprehensive civil engineering solutions including grading, drainage, utilities, and infrastructure design.",
+      backgroundImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
   ];
 
   const featured = projects.slice(0, 3);
@@ -28,25 +59,18 @@ export default function Home() {
       <main className="pt-16">
         <HeroVideo />
 
-        <Section id="services" title="Services" subtitle="Full lifecycle delivery grounded in transparency and technical rigor.">
-          <div className="flex flex-col lg:flex-row gap-12">
-            {/* Services Grid - Left Side */}
-            <div className="flex-1">
-              <div className="grid gap-6 md:grid-cols-2">
-                {capabilityData.map((c, i) => (
-                  <ServiceCard key={c.title} icon={c.icon} title={c.title} index={i}>{c.body}</ServiceCard>
-                ))}
-              </div>
-            </div>
-            
-            {/* Proof Counters - Right Side */}
-            <div className="lg:w-[28rem] lg:flex-shrink-0 lg:self-center">
-              <div className="bg-neutral-50 rounded-xl py-16 px-12 border border-neutral-200">
-                <ProofCounters />
-              </div>
+        {/* Here's How Section */}
+        <HeresHowSection />
+
+        {/* Services Overlay Section - Full Browser Width */}
+        <div id="services" className="w-full">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900">Services</h2>
             </div>
           </div>
-        </Section>
+          <ServicesOverlay services={capabilityData} />
+        </div>
 
         <Section title="Featured Projects" subtitle="Select work demonstrating market range and delivery discipline.">
           <div className="grid gap-6 md:grid-cols-3">
