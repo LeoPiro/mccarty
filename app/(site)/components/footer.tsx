@@ -21,8 +21,8 @@ export function Footer() {
           <h4 className="text-sm font-semibold tracking-wide uppercase mb-3 text-neutral-400">Navigate</h4>
                       <ul className="space-y-2 text-sm">
               <li><Link href="/projects" className="hover:underline">Projects</Link></li>
-              <li><Link href="#services" className="hover:underline">Services</Link></li>
-              <li><Link href="#about" className="hover:underline">About Us</Link></li>
+              <li><Link href="/#services" className="hover:underline">Services</Link></li>
+              <li><Link href="/about" className="hover:underline">About Us</Link></li>
             </ul>
         </div>
         <div>

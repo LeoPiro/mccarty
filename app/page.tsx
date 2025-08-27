@@ -73,11 +73,7 @@ export default function Home() {
 
         <FeaturedProject />
 
-        <Section id="about" title="About Us" subtitle="Building excellence through experience and innovation.">
-          <div className="text-center text-neutral-600">
-            <p>Content coming soon...</p>
-          </div>
-        </Section>
+
 
         <Section title="Client Feedback" subtitle="Relationships built on delivery, communication, and trust.">
           <ReviewCarousel />

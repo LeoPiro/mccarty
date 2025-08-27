@@ -6,7 +6,7 @@ import Image from "next/image";
 const nav = [
 	{ href: "/#services", label: "Services" },
 	{ href: "/projects", label: "Our Work" },
-	{ href: "/#about", label: "About Us" },
+	{ href: "/about", label: "About Us" },
 ];
 
 export function Header() {
