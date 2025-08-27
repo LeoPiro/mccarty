@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-export function CapabilityCard({ icon, title, children, index }: { icon: ReactNode; title: string; children: ReactNode; index: number }) {
+export function ServiceCard({ icon, title, children, index }: { icon: ReactNode; title: string; children: ReactNode; index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}

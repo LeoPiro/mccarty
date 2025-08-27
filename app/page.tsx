@@ -1,6 +1,6 @@
 import { HeroVideo } from "./(site)/components/hero-video";
 import { ProofCounters } from "./(site)/components/proof-counters";
-import { CapabilityCard } from "./(site)/components/capability-card";
+import { ServiceCard } from "./(site)/components/service-card";
 import { ReviewCarousel } from "./(site)/components/review-carousel";
 import { Header } from "./(site)/components/header";
 import { Footer } from "./(site)/components/footer";
@@ -27,11 +27,17 @@ export default function Home() {
       <main className="pt-16">
         <HeroVideo />
 
-        <Section id="capabilities" title="Capabilities" subtitle="Full lifecycle delivery grounded in transparency and technical rigor.">
+        <Section id="services" title="Services" subtitle="Full lifecycle delivery grounded in transparency and technical rigor.">
           <div className="grid gap-6 md:grid-cols-3">
             {capabilityData.map((c, i) => (
-              <CapabilityCard key={c.title} icon={c.icon} title={c.title} index={i}>{c.body}</CapabilityCard>
+              <ServiceCard key={c.title} icon={c.icon} title={c.title} index={i}>{c.body}</ServiceCard>
             ))}
+          </div>
+        </Section>
+
+        <Section id="about" title="About Us" subtitle="Building excellence through experience and innovation.">
+          <div className="text-center text-neutral-600">
+            <p>Content coming soon...</p>
           </div>
         </Section>
 
