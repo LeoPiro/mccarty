@@ -89,7 +89,7 @@ export default function AboutPage() {
                 Civil Engineering Design & Permitting
               </h3>
               <p className="text-xl text-neutral-700 leading-relaxed">
-                Our civil engineering division specializes in representing owner/client interests in the design of land and improvements required to accommodate the owner's building program. We bring over two decades of specialized expertise to every project.
+                Our civil engineering division specializes in representing owner/client interests in the design of land and improvements required to accommodate the owner&apos;s building program. We bring over two decades of specialized expertise to every project.
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <Award className="h-5 w-5 text-yellow-300" />
-                      <span className="text-sm">Worcester Business Journal's 2013 40 Under 40 Awards</span>
+                      <span className="text-sm">Worcester Business Journal&apos;s 2013 40 Under 40 Awards</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Building2 className="h-5 w-5" />
@@ -151,7 +151,7 @@ export default function AboutPage() {
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white p-12 md:p-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how McCarty Companies can bring your vision to life with our comprehensive construction and engineering services.
+              Let&apos;s discuss how McCarty Companies can bring your vision to life with our comprehensive construction and engineering services.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-8">

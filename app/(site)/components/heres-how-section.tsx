@@ -11,13 +11,13 @@ export function HeresHowSection() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-neutral-900 mb-16">Here's How</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-neutral-900 mb-16">Here&apos;s How</h2>
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Side - Descriptive Text */}
           <div className="flex-1">
             <div className="prose prose-neutral max-w-none">
               <p className="text-lg leading-relaxed text-neutral-700">
-                Whether we're focusing on the design, construction and performance of buildings or expanding into new disciplines, we never limit ourselves, applying our expertise to all types of projects across a range of industries. Our approach combines rigorous analysis with innovative thinking to deliver solutions that exceed expectations.
+                Whether we&apos;re focusing on the design, construction and performance of buildings or expanding into new disciplines, we never limit ourselves, applying our expertise to all types of projects across a range of industries. Our approach combines rigorous analysis with innovative thinking to deliver solutions that exceed expectations.
               </p>
               <p className="text-lg leading-relaxed text-neutral-700 mt-6">
                 From concept to completion, we leverage cutting-edge technology and proven methodologies to ensure every project meets the highest standards of quality, safety, and efficiency.

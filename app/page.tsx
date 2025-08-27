@@ -1,11 +1,9 @@
 import { HeroVideo } from "./(site)/components/hero-video";
 import { HeresHowSection } from "./(site)/components/heres-how-section";
-import { ServiceCard } from "./(site)/components/service-card";
 import { ServicesOverlay } from "./(site)/components/services-overlay";
 import { ReviewCarousel } from "./(site)/components/review-carousel";
 import { Header } from "./(site)/components/header";
 import { Footer } from "./(site)/components/footer";
-import { Section } from "./(site)/components/section";
 import { FeaturedProject } from "./(site)/components/featured-project";
 import { HardHat, Building2, ClipboardList, Wrench, Users2, Map } from "lucide-react";
 import Link from "next/link";
@@ -64,8 +62,9 @@ export default function Home() {
         {/* Services Overlay Section - Full Browser Width */}
         <div id="services" className="w-full">
           <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-4xl md:text-5xl font-bold text-neutral-900">Services</h2>
+              <p className="mt-4 text-xl text-neutral-600">Engineering excellence meets construction precision for infrastructure that stands the test of time.</p>
             </div>
           </div>
           <ServicesOverlay services={capabilityData} />
@@ -75,9 +74,15 @@ export default function Home() {
 
 
 
-        <Section title="Client Feedback" subtitle="Relationships built on delivery, communication, and trust.">
-          <ReviewCarousel />
-        </Section>
+        <section className="py-16">
+          <div className="mx-auto max-w-6xl px-6 text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-900">Client Feedback</h2>
+            <p className="mt-4 text-xl text-neutral-600">Relationships built on delivery, communication, and trust.</p>
+          </div>
+          <div className="mx-auto max-w-6xl px-6">
+            <ReviewCarousel />
+          </div>
+        </section>
 
         <section className="mx-auto max-w-6xl px-6 py-24">
           <div className="rounded-2xl bg-neutral-900 text-white p-12 md:p-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">

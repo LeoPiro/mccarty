@@ -17,27 +17,18 @@ interface ServicesOverlayProps {
 export function ServicesOverlay({ services }: ServicesOverlayProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Reset state when component mounts or services change
   useEffect(() => {
     setIsLoaded(true);
-    setImageLoaded(false);
   }, [services]);
-
-  // Handle image loading
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
 
   const nextService = () => {
     setCurrentIndex((prev) => (prev + 1) % services.length);
-    setImageLoaded(false); // Reset image loaded state for new image
   };
 
   const prevService = () => {
     setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
-    setImageLoaded(false); // Reset image loaded state for new image
   };
 
   // Ensure we have valid service data
@@ -66,7 +57,7 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
           maxWidth: '100vw',
           animation: 'pan 20s ease-in-out infinite'
         }}
-        onLoad={handleImageLoad}
+
       >
         {/* Dark overlay for better readability */}
         <div className="absolute inset-0 bg-black/40" />
@@ -104,7 +95,6 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
                 key={index}
                 onClick={() => {
                   setCurrentIndex(index);
-                  setImageLoaded(false);
                 }}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentIndex 
