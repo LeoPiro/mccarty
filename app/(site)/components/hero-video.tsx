@@ -45,9 +45,9 @@ export function HeroVideo() {
         className="relative z-10 mx-auto flex h-full max-w-6xl items-end px-6 pb-16 text-white"
       >
         <div>
-          <h1 className="text-4xl md:text-6xl font-semibold text-balance">Building spaces that move people.</h1>
-          <p className="mt-4 max-w-2xl text-lg opacity-90">Construction, development, and project delivery—on time and on budget.</p>
-          <a href="/contact" className="mt-8 inline-block rounded-md bg-white text-neutral-900 px-6 py-3 font-medium">Start Your Project</a>
+          <h1 className="text-4xl md:text-6xl font-semibold text-balance">A better way to build</h1>
+          <p className="mt-4 max-w-2xl text-lg opacity-90">Integrated design and construction — from start to finish.</p>
+          <a href="/contact" className="mt-8 inline-block rounded-md bg-white text-mccarty-dark px-6 py-3 font-medium hover:bg-mccarty-light transition-colors">Start Your Project</a>
         </div>
       </motion.div>
     </section>

@@ -1,5 +1,26 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Lato, Montserrat } from "next/font/google";
 import "./globals.css";
+
+// Font configurations
+const playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const lato = Lato({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  variable: "--font-lato",
+  display: "swap",
+});
+
+const montserrat = Montserrat({ 
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "McCarty | Building & Development",
@@ -32,13 +53,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${playfair.variable} ${lato.variable} ${montserrat.variable}`}>
       <head>
         <link rel="icon" href="/mccarty-logo.jpg" />
         <link rel="shortcut icon" href="/mccarty-logo.jpg" />
         <link rel="apple-touch-icon" href="/mccarty-logo.jpg" />
       </head>
-      <body className="min-h-screen antialiased bg-neutral-200 text-neutral-900 font-sans">
+      <body className="min-h-screen antialiased bg-mccarty-light text-mccarty-dark">
         {children}
       </body>
     </html>
