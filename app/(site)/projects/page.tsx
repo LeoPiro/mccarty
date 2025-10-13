@@ -15,8 +15,8 @@ function ProjectsLoading() {
   return (
     <div className="flex items-center justify-center min-h-[400px]">
       <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-neutral-900 mx-auto mb-4"></div>
-        <p className="text-neutral-600">Loading projects...</p>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-mccarty-dark mx-auto mb-4"></div>
+        <p className="text-mccarty-medium">Loading projects...</p>
       </div>
     </div>
   );
@@ -28,8 +28,8 @@ function ProjectsError({ error }: { error: Error }) {
     <div className="flex items-center justify-center min-h-[400px]">
       <div className="text-center">
         <p className="text-red-600 mb-4">Error loading projects</p>
-        <p className="text-neutral-600 text-sm">{error.message}</p>
-        <Link href="/" className="mt-4 inline-block text-blue-600 hover:underline">
+        <p className="text-mccarty-medium text-sm">{error.message}</p>
+        <Link href="/" className="mt-4 inline-block text-mccarty-dark hover:underline hover:text-mccarty-medium transition-colors">
           Return to home
         </Link>
       </div>
@@ -63,8 +63,8 @@ function ProjectsContent(props: any) {
                 <Link
                   key={c}
                   href={href}
-                  className={`px-3 py-1 rounded-full border text-sm transition-colors ${
-                    active ? "bg-neutral-900 text-white" : "hover:bg-neutral-100"
+                  className={`px-3 py-1 rounded-full border border-mccarty-light text-sm transition-colors ${
+                    active ? "bg-mccarty-dark text-white" : "text-mccarty-dark hover:bg-mccarty-light"
                   }`}
                 >
                   {c}
@@ -75,7 +75,7 @@ function ProjectsContent(props: any) {
           
           {list.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-neutral-600">No projects found in this category.</p>
+              <p className="text-mccarty-medium">No projects found in this category.</p>
             </div>
           ) : (
             <div className="grid gap-6 md:grid-cols-3">

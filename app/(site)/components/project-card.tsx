@@ -26,13 +26,13 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="group rounded-lg overflow-hidden border bg-white shadow-sm hover:shadow-md transition-shadow"
+      className="group rounded-lg overflow-hidden border border-mccarty-light bg-white shadow-sm hover:shadow-md transition-shadow"
     >
       <Link href={`/projects/${project.slug}`} className="block">
-        <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+        <div className="relative aspect-[4/3] overflow-hidden bg-mccarty-light/30">
           {imageLoading && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-neutral-400"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-mccarty-medium"></div>
             </div>
           )}
           
@@ -47,8 +47,8 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
               sizes="(min-width: 768px) 33vw, 100vw"
             />
           ) : (
-            <div className="absolute inset-0 flex items-center justify-center bg-neutral-200">
-              <div className="text-center text-neutral-500">
+            <div className="absolute inset-0 flex items-center justify-center bg-mccarty-light">
+              <div className="text-center text-mccarty-medium">
                 <div className="text-2xl mb-2">🏗️</div>
                 <p className="text-xs">Image unavailable</p>
               </div>
@@ -57,9 +57,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </div>
         
         <div className="p-5">
-          <div className="text-xs font-medium tracking-wide uppercase text-neutral-500">{project.category}</div>
-          <h3 className="mt-1 text-lg font-semibold">{project.name}</h3>
-          <p className="mt-2 text-sm text-neutral-600 line-clamp-3">{project.excerpt}</p>
+          <div className="text-xs font-medium tracking-wide uppercase text-mccarty-medium">{project.category}</div>
+          <h3 className="mt-1 text-lg font-semibold text-mccarty-dark">{project.name}</h3>
+          <p className="mt-2 text-sm text-mccarty-medium line-clamp-3">{project.excerpt}</p>
         </div>
       </Link>
     </motion.div>

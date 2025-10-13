@@ -47,10 +47,10 @@ export function ProofCounters() {
             transition={{ delay: i * 0.05 }}
             className="flex flex-col items-center justify-center"
           >
-            <div className="text-2xl md:text-3xl font-semibold text-neutral-800 text-center w-full min-h-[2.5rem] flex items-center justify-center font-mono">
+            <div className="text-2xl md:text-3xl font-semibold text-mccarty-dark text-center w-full min-h-[2.5rem] flex items-center justify-center font-mono">
               {item.value}
             </div>
-            <div className="mt-2 text-xs text-neutral-500 leading-tight text-center w-full">{item.label}</div>
+            <div className="mt-2 text-xs text-mccarty-medium leading-tight text-center w-full">{item.label}</div>
           </motion.div>
         ))}
       </div>

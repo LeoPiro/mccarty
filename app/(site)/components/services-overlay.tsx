@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ServiceCard } from "./service-card";
 
 interface ServiceData {
-  icon: React.ReactNode;
   title: string;
   body: string;
   backgroundImage: string;
@@ -34,8 +33,8 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
   // Ensure we have valid service data
   if (!services || services.length === 0) {
     return (
-      <div className="relative w-full h-[600px] overflow-hidden bg-neutral-100 flex items-center justify-center">
-        <div className="text-center text-neutral-600">
+      <div className="relative w-full h-[600px] overflow-hidden bg-mccarty-light/30 flex items-center justify-center">
+        <div className="text-center text-mccarty-medium">
           <p>Loading services...</p>
         </div>
       </div>
@@ -66,9 +65,8 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
       {/* Service Card Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6">
         {isLoaded && currentService && (
-          <div className="max-w-2xl w-full mb-8">
+          <div className="max-w-3xl w-full mb-8">
             <ServiceCard 
-              icon={currentService.icon}
               title={currentService.title}
               index={currentIndex}
               overlay={true}
@@ -82,7 +80,7 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
         <div className="flex items-center justify-center space-x-8">
           <button
             onClick={prevService}
-            className="p-3 bg-white/90 hover:bg-white text-neutral-800 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+            className="p-3 bg-white/90 hover:bg-white text-mccarty-dark rounded-full shadow-lg transition-all duration-200 hover:scale-110"
             aria-label="Previous service"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -108,7 +106,7 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
 
           <button
             onClick={nextService}
-            className="p-3 bg-white/90 hover:bg-white text-neutral-800 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+            className="p-3 bg-white/90 hover:bg-white text-mccarty-dark rounded-full shadow-lg transition-all duration-200 hover:scale-110"
             aria-label="Next service"
           >
             <ChevronRight className="h-6 w-6" />
