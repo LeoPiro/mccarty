@@ -126,36 +126,30 @@ export default function AssociatesPage() {
               </p>
             </div>
             
-            {/* 2x2 Grid for Services */}
-            <div className="grid md:grid-cols-[1fr_1.2fr] gap-x-16 gap-y-8 max-w-5xl mx-auto">
-              {/* Top Left - Owner and Investor Representation */}
-              <div className="flex items-center justify-end">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Owner and investor representation</h3>
-                  <p className="text-lg leading-relaxed text-mccarty-medium">
-                    We act as a trusted representative, overseeing the entire construction lifecycle on behalf of the client, investor, or lending institution. Our team oversees budgets, schedules and contracts while coordinating communication among all stakeholders. With transparent reporting and proactive issue resolution, clients can make confident, informed decisions that keep their projects on schedule and within scope.
-                  </p>
-                </div>
+            {/* Stacked Layout for Services */}
+            <div className="space-y-12">
+              {/* Owner and Investor Representation */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Owner and investor representation</h3>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
+                  We act as a trusted representative, overseeing the entire construction lifecycle on behalf of the client, investor, or lending institution. Our team oversees budgets, schedules and contracts while coordinating communication among all stakeholders. With transparent reporting and proactive issue resolution, clients can make confident, informed decisions that keep their projects on schedule and within scope.
+                </p>
               </div>
 
-              {/* Top Right - Building Owner and Bank Representation - Spans 2 rows */}
-              <div className="md:row-span-2 flex items-center">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Building owner and bank representation, contract fulfillment and funds dispersal</h3>
-                  <p className="text-lg leading-relaxed text-mccarty-medium">
-                    For lenders and owners, we offer rigorous funds control and contract oversight. Our specialists verify construction draw requests, change orders and lien waivers to ensure payments are accurate and properly dispersed. This is all backed by detailed documentation, giving stakeholders clear visibility into progress and expenses. This provides a crucial layer of financial and contractual security for the owner or lending institution, mitigating the risks associated with non-compliant performance or mismanaged funds.
-                  </p>
-                </div>
+              {/* Building Owner and Bank Representation */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Building owner and bank representation, contract fulfillment and funds dispersal</h3>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
+                  For lenders and owners, we offer rigorous funds control and contract oversight. Our specialists verify construction draw requests, change orders and lien waivers to ensure payments are accurate and properly dispersed. This is all backed by detailed documentation, giving stakeholders clear visibility into progress and expenses. This provides a crucial layer of financial and contractual security for the owner or lending institution, mitigating the risks associated with non-compliant performance or mismanaged funds.
+                </p>
               </div>
 
-              {/* Bottom Left - Project Remediation */}
-              <div className="flex items-center justify-end">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Project remediation and recovery consultation</h3>
-                  <p className="text-lg leading-relaxed text-mccarty-medium">
-                    When projects experience delays, contractor default, or quality concerns, our remediation experts step in to assess and recover work efficiently. We conduct on-site evaluations, review plans and contracts, and prepare cost-to-complete analysis that guide next steps. Through detailed monitoring, daily reporting, and progress validation, we restore control, manage cost recovery, and help owners bring challenged projects to successful completion.
-                  </p>
-                </div>
+              {/* Project Remediation */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Project remediation and recovery consultation</h3>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
+                  When projects experience delays, contractor default, or quality concerns, our remediation experts step in to assess and recover work efficiently. We conduct on-site evaluations, review plans and contracts, and prepare cost-to-complete analysis that guide next steps. Through detailed monitoring, daily reporting, and progress validation, we restore control, manage cost recovery, and help owners bring challenged projects to successful completion.
+                </p>
               </div>
             </div>
           </div>
