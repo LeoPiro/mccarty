@@ -1,40 +1,28 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import Image from "next/image";
 
 export function HeroVideo() {
   const reduce = useReducedMotion();
   const [canPlay, setCanPlay] = useState(false);
-  const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
     setCanPlay(!reduce);
   }, [reduce]);
 
-  const poster = "/media/hero-poster.jpg"; // switched from .svg to .jpg
-
   return (
     <section className="relative h-[70vh] w-full overflow-hidden">
-      {canPlay && !videoError ? (
+      {canPlay ? (
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
           playsInline
-          poster={poster}
           src="/media/Werfern_interior.mp4"
-          onError={() => setVideoError(true)}
         />
       ) : (
-        <Image
-          src={poster}
-          alt="McCarty Companies hero placeholder"
-          fill
-          priority
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <div className="absolute inset-0 bg-mccarty-dark" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10" />
       <motion.div
