@@ -3,6 +3,7 @@ import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function AssociatesPage() {
   const reduce = useReducedMotion();
@@ -41,9 +42,8 @@ export default function AssociatesPage() {
           
           <motion.div
             initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-start justify-end px-6 pb-16 text-white"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4">McCarty Associates</h1>
@@ -86,49 +86,97 @@ export default function AssociatesPage() {
           </p>
         </section>
 
-        {/* Site Inspections */}
+        {/* Site Inspections - Image on Right */}
         <section id="site-inspections" className="bg-white py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Site inspections</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
-                McCarty Associates provides specialized inspection services tailored to the needs of financial institutions, property owners, and investors. Our team conducts thorough evaluations to verify that work is in place and completed in accordance with approved plans before funds are released or transactions move forward.
-              </p>
-              <p>
-                For clients considering property purchases, our inspections help identify capital expenditure needs and potential issues that could impact value or performance. These detailed assessments offer clear, actionable insights—helping lenders and buyers make informed decisions with confidence.
-              </p>
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text on Left */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Site inspections</h2>
+                <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
+                  <p>
+                    McCarty Associates provides specialized inspection services tailored to the needs of financial institutions, property owners, and investors. Our team conducts thorough evaluations to verify that work is in place and completed in accordance with approved plans before funds are released or transactions move forward.
+                  </p>
+                  <p>
+                    For clients considering property purchases, our inspections help identify capital expenditure needs and potential issues that could impact value or performance. These detailed assessments offer clear, actionable insights—helping lenders and buyers make informed decisions with confidence.
+                  </p>
+                </div>
+              </div>
+              {/* Image on Right */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/construction-site-inspection.jpg"
+                  alt="Construction site inspection professional"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Project Management */}
         <section id="project-management" className="bg-mccarty-light py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Project management</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
+          <div className="mx-auto max-w-6xl px-6">
+            {/* Centered Header and Intro */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Project management</h2>
+              <p className="text-lg leading-relaxed text-mccarty-medium max-w-4xl mx-auto">
                 Project management services extend far beyond simple scheduling. McCarty Associates embody dedicated client advocacy, robust financial stewardship, and proactive regulatory risk mitigation.
               </p>
-              
-              <div className="mt-8">
+            </div>
+            
+            {/* Owner and Investor Representation - Image on Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Owner and investor representation</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   We act as a trusted representative, overseeing the entire construction lifecycle on behalf of the client, investor, or lending institution. Our team oversees budgets, schedules and contracts while coordinating communication among all stakeholders. With transparent reporting and proactive issue resolution, clients can make confident, informed decisions that keep their projects on schedule and within scope.
                 </p>
               </div>
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&h=600&fit=crop"
+                  alt="Business handshake and representation"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Building Owner and Bank Representation - Image on Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800&h=600&fit=crop"
+                  alt="Bank building and financial institution"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Building owner and bank representation, contract fulfillment and funds dispersal</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   For lenders and owners, we offer rigorous funds control and contract oversight. Our specialists verify construction draw requests, change orders and lien waivers to ensure payments are accurate and properly dispersed. This is all backed by detailed documentation, giving stakeholders clear visibility into progress and expenses. This provides a crucial layer of financial and contractual security for the owner or lending institution, mitigating the risks associated with non-compliant performance or mismanaged funds.
                 </p>
               </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Project Remediation - Image on Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Project remediation and recovery consultation</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   When projects experience delays, contractor default, or quality concerns, our remediation experts step in to assess and recover work efficiently. We conduct on-site evaluations, review plans and contracts, and prepare cost-to-complete analysis that guide next steps. Through detailed monitoring, daily reporting, and progress validation, we restore control, manage cost recovery, and help owners bring challenged projects to successful completion.
                 </p>
+              </div>
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?w=800&h=600&fit=crop"
+                  alt="Problem solving and project recovery"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -136,50 +184,98 @@ export default function AssociatesPage() {
 
         {/* Site Development */}
         <section id="site-development" className="bg-white py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Site development</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
+          <div className="mx-auto max-w-6xl px-6">
+            {/* Centered Header and Intro */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Site development</h2>
+              <p className="text-lg leading-relaxed text-mccarty-medium max-w-4xl mx-auto">
                 Preparing a site for construction demands technical experience, environmental sensitivity and precise execution. Our site development services cover every aspect of pre-construction work, managing everything from early clearing and grading to final paving and utility installation. Each phase is coordinated to ensure compliance with local, state and federal regulations.
               </p>
-              
-              <div className="mt-8">
+            </div>
+            
+            {/* Site Clearing - Image on Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Site clearing, demolition, recycling and disposal</h3>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-2 text-lg text-mccarty-medium">
                   <li>Complete removal of existing structures, vegetation and debris</li>
                   <li>Detailed assessment of soil conditions, existing utilities, and drainage patterns</li>
                   <li>Emphasis on responsible material recycling and disposal</li>
                 </ul>
               </div>
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/Demolition-of-building-Everything-you-need-to-know-about-it.jpg"
+                  alt="Building demolition and site clearing"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Excavation - Image on Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/bulldozer-excavation.png"
+                  alt="Bulldozer excavation and grading work"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Excavation, grading and earthwork</h3>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-2 text-lg text-mccarty-medium">
                   <li>Full-service excavation and grading for stable foundations and precise elevations</li>
                   <li>Includes foundation excavation, trenching for underground utilities, and bulk earth movement</li>
                   <li>Utilizes modern equipment and CAD-based modeling for smooth, accurate surfaces that optimize construction performance</li>
                 </ul>
               </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Stormwater - Image on Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Stormwater drainage, erosion control and retention ponds</h3>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-2 text-lg text-mccarty-medium">
                   <li>Design and installation of stormwater systems that manage runoff and protect surrounding environments</li>
                   <li>Incorporation of proven methods to balance water flow, prevent erosion, and ensure long-term site stability</li>
                   <li>Compliance with all environmental and municipal regulations</li>
                 </ul>
               </div>
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/industrial-drainage-channel.jpg"
+                  alt="Industrial drainage channel installation"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Roadbed - Image on Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/roadbed-preparation.jpg"
+                  alt="Roadbed preparation and construction"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Roadbed preparation, construction and utility infrastructure</h3>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-2 text-lg text-mccarty-medium">
                   <li>Preparation and construction of roads and utility systems supporting new developments</li>
                   <li>Services include subgrade and roadbed preparation, curb and gutter installation, asphalt paving, resurfacing and final striping</li>
                   <li>Coordination of underground utility work to ensure accurate installation and seamless integration with site infrastructure</li>
                 </ul>
               </div>
+            </div>
 
-              <p className="mt-8">
+            {/* Closing Statement */}
+            <div className="text-center">
+              <p className="text-lg leading-relaxed text-mccarty-medium max-w-4xl mx-auto">
                 Our late-model fleet and advanced surveying equipment allow for accurate layouts and dependable schedules, reducing downtime and preventing costly delays. Whether the project involves a large-scale commercial site or municipal infrastructure, we provide the groundwork for lasting success.
               </p>
             </div>
@@ -188,37 +284,82 @@ export default function AssociatesPage() {
 
         {/* Construction Management */}
         <section id="construction-management" className="bg-mccarty-light py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Construction management</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
+          <div className="mx-auto max-w-6xl px-6">
+            {/* Centered Header and Intro */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Construction management</h2>
+              <p className="text-lg leading-relaxed text-mccarty-medium max-w-4xl mx-auto">
                 As general contractors and construction managers, McCarty Associates offers a unified source of accountability, expertly guiding projects from the earliest schematic design reviews through final interior fit-out.
               </p>
-              
-              <div className="mt-8">
+            </div>
+            
+            {/* Estimating - Image on Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Estimating and scheduling</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   Accurate estimating and proactive scheduling are key to delivering projects on time and within budget. Our team develops comprehensive cost models from early conceptual estimates through detailed construction budgets, incorporating risk analysis, phasing, and procurement strategies. Continuous monitoring throughout design and construction keeps financial performance aligned with project goals.
                 </p>
               </div>
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+                  alt="Construction estimating and scheduling"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Value Engineering - Image on Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop"
+                  alt="Value engineering and design analysis"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Value engineering</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   Value engineering is central to how we deliver efficiency without compromise. By analyzing materials, systems, and construction methods early, we identify opportunities to reduce costs while maintaining performance and aesthetics. Our experts regularly propose innovative solutions that optimize both design and lifecycle value.
                 </p>
               </div>
+            </div>
 
-              <div className="mt-8">
+            {/* Design/Build - Image on Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Design/build contracting</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   Through the design-build approach, we integrate design and construction under one contract — simplifying communication, accelerating timelines, and reducing cost. This single-source accountability streamlines project delivery, ensuring design intent aligns with constructability from day one. Our collaborative process often shortens overall schedules while improving cost control and quality outcomes.
                 </p>
               </div>
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop"
+                  alt="Design-build construction collaboration"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
 
-              <div className="mt-8">
+            {/* General Contracting - Image on Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/construction-manager-group.png"
+                  alt="Construction manager with team on site"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">General contracting and construction management</h3>
-                <p>
+                <p className="text-lg leading-relaxed text-mccarty-medium">
                   As a general contractor, we coordinate all trades, materials, and schedules to ensure seamless execution in the field. Our construction managers maintain consistent oversight, enforce safety standards, and monitor quality control. This integration of planning, design, and construction management ensures every project meets its technical, budgetary, and performance objectives.
                 </p>
               </div>
