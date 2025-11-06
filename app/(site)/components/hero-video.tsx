@@ -24,7 +24,7 @@ export function HeroVideo() {
           loop
           playsInline
           poster={poster}
-          src="/media/hero.mp4"
+          src="/media/Werfern_interior.mp4"
           onError={() => setVideoError(true)}
         />
       ) : (
@@ -46,8 +46,8 @@ export function HeroVideo() {
       >
         <div>
           <h1 className="text-4xl md:text-6xl font-semibold text-balance">A better way to build</h1>
-          <p className="mt-4 max-w-2xl text-lg opacity-90">Integrated design and construction — from start to finish.</p>
-          <a href="/contact" className="mt-8 inline-block rounded-md bg-white text-mccarty-dark px-6 py-3 font-medium hover:bg-mccarty-light transition-colors">Start Your Project</a>
+          <p className="mt-4 max-w-2xl text-lg opacity-90">Integrated design and construction — from start to finish</p>
+          <a href="/contact" className="mt-8 inline-block rounded-md bg-white text-mccarty-dark px-6 py-3 font-medium hover:bg-mccarty-light transition-colors">Start your project</a>
         </div>
       </motion.div>
     </section>

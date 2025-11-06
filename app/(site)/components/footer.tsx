@@ -5,70 +5,68 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="mt-32 border-t border-mccarty-light bg-mccarty-dark text-mccarty-light">
-      <div className="mx-auto max-w-6xl px-6 py-12">
-        {/* Social Media Links */}
-        <div className="flex justify-center gap-6 mb-8">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-medium hover:bg-white hover:text-mccarty-dark transition-colors"
-            aria-label="Facebook"
-          >
-            <Facebook className="h-5 w-5" />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-medium hover:bg-white hover:text-mccarty-dark transition-colors"
-            aria-label="Instagram"
-          >
-            <Instagram className="h-5 w-5" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-medium hover:bg-white hover:text-mccarty-dark transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" />
-          </a>
-        </div>
-
-        {/* Logo */}
-        <div className="flex justify-center mb-8">
-          <Link href="/">
-            <Image
-              src="/mccarty-logo.jpg"
-              alt="McCarty Companies Logo"
-              width={220}
-              height={55}
-              className="h-16 w-auto"
-            />
-          </Link>
-        </div>
-
-        {/* Contact Information */}
-        <div className="text-center space-y-2 mb-6">
-          <div>
+    <footer className="mt-12 border-t border-mccarty-light bg-white">
+      <div className="mx-auto max-w-6xl px-6 py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Left Side - Contact Information & Copyright */}
+          <div className="flex flex-col items-center md:items-start space-y-1 text-mccarty-dark">
             <a
               href="tel:+19785348727"
-              className="text-base hover:text-white transition-colors"
+              className="text-sm hover:text-mccarty-medium transition-colors"
             >
               978-534-8727
             </a>
+            <div className="text-sm">
+              42 Tucker Drive, Leominster, MA 01453
+            </div>
+            <div className="text-xs text-mccarty-medium pt-2">
+              © {new Date().getFullYear()} McCarty Companies. All rights reserved.
+            </div>
           </div>
-          <div className="text-sm opacity-90">
-            42 Tucker Drive, Leominster, MA 01453
-          </div>
-        </div>
 
-        {/* Copyright */}
-        <div className="text-center text-xs text-mccarty-medium pt-6 border-t border-mccarty-medium">
-          © {new Date().getFullYear()} McCarty Companies. All rights reserved.
+          {/* Center - Logo */}
+          <div className="flex justify-center">
+            <Link href="/">
+              <Image
+                src="/mccarty-logo.jpg"
+                alt="McCarty Companies Logo"
+                width={180}
+                height={45}
+                className="h-12 w-auto"
+              />
+            </Link>
+          </div>
+
+          {/* Right Side - Social Media Links */}
+          <div className="flex gap-4">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-light hover:bg-mccarty-dark hover:text-white transition-colors text-mccarty-dark"
+              aria-label="Facebook"
+            >
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-light hover:bg-mccarty-dark hover:text-white transition-colors text-mccarty-dark"
+              aria-label="Instagram"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-light hover:bg-mccarty-dark hover:text-white transition-colors text-mccarty-dark"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

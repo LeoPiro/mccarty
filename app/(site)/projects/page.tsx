@@ -54,7 +54,7 @@ function ProjectsContent(props: any) {
     return (
       <>
         <Header />
-        <Section title="Our Work" subtitle="Diverse portfolio across market sectors." className="pt-32">
+        <Section title="Our work" subtitle="Diverse portfolio across market sectors" className="pt-32">
           <div className="flex flex-wrap gap-2 mb-8">
             {categories.map(c => {
               const href = c === "All" ? "/projects" : `/projects?category=${encodeURIComponent(c)}`;
