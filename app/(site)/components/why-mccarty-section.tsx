@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 
 const reasons = [
   {
-    title: "One source. Less stress.",
-    body: "Coordinating multiple firms for a single project often leads to delays, confusion and costly miscommunication. McCarty removes that complexity by managing every stage of the process, from design and permitting, through construction and delivery.\n\nWith one dedicated partner handling the process, you can avoid the stress of juggling engineers, contractors and project managers. We take full responsibility for every phase, so you can stay focused on your business while we ensure your project is delivered as planned."
+    title: "One source, less stress",
+    body: "Coordinating multiple firms for a single project often leads to delays, confusion and costly miscommunication. McCarty removes that complexity by managing every stage of the process, from design and permitting, through construction and delivery.\n\nWith one dedicated partner handling the process, you can avoid the stress of juggling engineers, contractors and project managers. We take full responsibility for every phase, so you can stay focused on your business while we ensure your project is delivered as planned"
   },
   {
     title: "Smarter spending",
-    body: "Budgets matter and we manage costs with discipline. By keeping all our services in-house, we avoid unnecessary outside services, eliminate redundant work and prevent the use of materials that add expense without adding value.\n\nWith construction and design working together from day one, every choice is evaluated for efficiency, constructability and performance. The result is a project that maximizes your investment while meeting the highest standards of quality."
+    body: "Budgets matter and we manage costs with discipline. By keeping all our services in-house, we avoid unnecessary outside services, eliminate redundant work and prevent the use of materials that add expense without adding value.\n\nWith construction and design working together from day one, every choice is evaluated for efficiency, constructability and performance. The result is a project that maximizes your investment while meeting the highest standards of quality"
   },
   {
     title: "Accountability that matters",
-    body: "Every project faces challenges, but what defines success is how they are addressed. We take full ownership of your project from start to finish. If challenges arise, we address them directly and resolve them without delay. At McCarty, accountability is more than a value, it is one of our operating principles."
+    body: "Every project faces challenges, but what defines success is how they are addressed. We take full ownership of your project from start to finish. If challenges arise, we address them directly and resolve them without delay. At McCarty, accountability is more than a value, it is one of our operating principles"
   },
   {
     title: "Timelines that you can trust",
-    body: "Your schedule is central to the success of your project. With disciplined project management, proactive scheduling and experienced teams, we maintain momentum and deliver projects on time and on budget. You can move into your space with confidence, knowing it will be ready when your business needs it."
+    body: "Your schedule is central to the success of your project. With disciplined project management, proactive scheduling and experienced teams, we maintain momentum and deliver projects on time and on budget. You can move into your space with confidence, knowing it will be ready when your business needs it"
   }
 ];
 

@@ -31,7 +31,7 @@ export default function ContactPage() {
             <label className="block text-sm font-medium mb-1 text-mccarty-dark" htmlFor="message">Message *</label>
             <textarea id="message" name="message" required rows={6} className="w-full rounded-md border border-mccarty-light bg-white px-3 py-2 text-sm focus:border-mccarty-dark focus:ring-1 focus:ring-mccarty-dark outline-none transition-colors" />
           </div>
-          <button type="submit" className="rounded-md bg-mccarty-dark text-white px-6 py-3 text-sm font-medium hover:bg-mccarty-medium transition-colors">Send Message</button>
+          <button type="submit" className="rounded-md bg-mccarty-dark text-white px-6 py-3 text-sm font-medium hover:bg-mccarty-medium transition-colors">Send message</button>
         </form>
       </main>
       <Footer />

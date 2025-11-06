@@ -5,15 +5,14 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 const nav = [
-	{ href: "/#services", label: "Services" },
-	{ href: "/projects", label: "Our Work" },
-	{ href: "/about", label: "Meet the Team" },
-	{ href: "#", label: "News and Recognition" },
+	{ href: "/projects", label: "Our work" },
+	{ href: "/about", label: "Meet our team" },
+	{ href: "#", label: "News and recognition" },
 ];
 
 const divisions = [
-	{ href: "#", label: "McCarty Engineering" },
-	{ href: "#", label: "McCarty Associates" },
+	{ href: "/engineering", label: "McCarty Engineering" },
+	{ href: "/associates", label: "McCarty Associates" },
 ];
 
 export function Header() {
@@ -39,22 +38,28 @@ export function Header() {
 				</Link>
 				<nav className="hidden md:flex items-center gap-8 text-sm text-mccarty-dark">
 					{/* Divisions Dropdown - First item */}
-					<div 
-						className="relative"
-						onMouseEnter={() => setDivisionsOpen(true)}
-						onMouseLeave={() => setDivisionsOpen(false)}
-					>
-						<button className="flex items-center gap-1 hover:text-mccarty-medium transition-colors">
+					<div className="relative">
+						<button 
+							onClick={() => setDivisionsOpen(!divisionsOpen)}
+							onBlur={(e) => {
+								// Only close if clicking outside the dropdown
+								if (!e.currentTarget.parentElement?.contains(e.relatedTarget as Node)) {
+									setDivisionsOpen(false);
+								}
+							}}
+							className="flex items-center gap-1 hover:text-mccarty-medium transition-colors"
+						>
 							Divisions
 							<ChevronDown className={`h-4 w-4 transition-transform ${divisionsOpen ? 'rotate-180' : ''}`} />
 						</button>
 						
 						{divisionsOpen && (
-							<div className="absolute top-full left-0 mt-2 w-56 bg-white border border-mccarty-light rounded-md shadow-lg py-2">
+							<div className="absolute top-full left-0 mt-2 w-56 bg-white border border-mccarty-light rounded-md shadow-lg py-2 z-50">
 								{divisions.map((division) => (
 									<Link
 										key={division.label}
 										href={division.href}
+										onClick={() => setDivisionsOpen(false)}
 										className="block px-4 py-2 text-sm text-mccarty-dark hover:bg-mccarty-light transition-colors"
 									>
 										{division.label}
@@ -78,7 +83,7 @@ export function Header() {
 						href="/contact"
 						className="ml-2 inline-block rounded-md bg-mccarty-dark text-white px-4 py-2 font-medium text-sm hover:bg-mccarty-medium transition-colors"
 					>
-						Let&apos;s Talk
+						Let&apos;s talk
 					</Link>
 				</nav>
 				<button
@@ -123,7 +128,7 @@ export function Header() {
 						href="/contact"
 						className="inline-block rounded-md bg-mccarty-dark text-white px-4 py-2 font-medium text-sm hover:bg-mccarty-medium transition-colors"
 					>
-						Let&apos;s Talk
+						Let&apos;s talk
 					</Link>
 				</div>
 			)}

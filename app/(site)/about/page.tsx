@@ -107,7 +107,7 @@ export default function MeetTheTeamPage() {
           <div className="absolute inset-0 bg-black/20" />
           <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Meet the <span className="text-mccarty-light">Team</span>
+              Meet our <span className="text-mccarty-light">team</span>
             </h1>
             <p className="text-xl md:text-2xl text-mccarty-light max-w-4xl mx-auto leading-relaxed">
               The people behind McCarty Companies - dedicated professionals committed to excellence
@@ -132,8 +132,8 @@ export default function MeetTheTeamPage() {
                   {filter}
                 </button>
               ))}
-            </div>
-          </div>
+                </div>
+              </div>
         </section>
 
         {/* Team Grid */}
@@ -166,15 +166,15 @@ export default function MeetTheTeamPage() {
         {/* CTA Section */}
         <section className="mx-auto max-w-6xl px-6 py-16">
           <div className="bg-gradient-to-r from-mccarty-dark to-[#3a3a3a] rounded-3xl text-white p-12 md:p-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Join our team</h2>
             <p className="text-xl text-mccarty-light mb-8 max-w-2xl mx-auto">
-              We&apos;re always looking for talented professionals to join the McCarty Companies family.
+              We&apos;re always looking for talented professionals to join the McCarty Companies family
             </p>
             <a
               href="/contact"
               className="inline-block bg-white text-mccarty-dark px-8 py-4 rounded-xl font-semibold hover:bg-mccarty-light transition-colors"
             >
-              Get in Touch
+              Get in touch
             </a>
           </div>
         </section>
@@ -190,7 +190,7 @@ export default function MeetTheTeamPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
-                <div className="grid md:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0">
                   <div className="relative h-96 md:h-full">
                     <Image
                       src={selectedMember.image}
