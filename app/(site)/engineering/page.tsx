@@ -3,6 +3,7 @@ import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function EngineeringPage() {
   const reduce = useReducedMotion();
@@ -41,9 +42,8 @@ export default function EngineeringPage() {
           
           <motion.div
             initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-start justify-end px-6 pb-16 text-white"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4">McCarty Engineering</h1>
@@ -86,68 +86,124 @@ export default function EngineeringPage() {
           </p>
         </section>
 
-        {/* Civil Engineering Design */}
+        {/* Civil Engineering Design - Image on Right */}
         <section id="civil-design" className="bg-white py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Civil engineering design</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
-                Our engineers develop efficient, code-compliant site plans that balance functionality, cost, and sustainability. Every design considers grading, drainage, access, and infrastructure to ensure safe and durable outcomes. Leveraging advanced CAD and modeling software, we produce highly accurate layouts that streamline permitting, reduce change orders and minimize construction delays.
-              </p>
-              <p>
-                Each project begins with a comprehensive analysis of existing conditions including soil composition, utilities, and environmental features, allowing us to design systems that work with the land rather than against it. From parking lot layout to roadway alignment and stormwater management, our approach prioritizes reliability and constructability.
-              </p>
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text on Left */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Civil engineering design</h2>
+                <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
+                  <p>
+                    Our engineers develop efficient, code-compliant site plans that balance functionality, cost, and sustainability. Every design considers grading, drainage, access, and infrastructure to ensure safe and durable outcomes. Leveraging advanced CAD and modeling software, we produce highly accurate layouts that streamline permitting, reduce change orders and minimize construction delays.
+                  </p>
+                  <p>
+                    Each project begins with a comprehensive analysis of existing conditions including soil composition, utilities, and environmental features, allowing us to design systems that work with the land rather than against it. From parking lot layout to roadway alignment and stormwater management, our approach prioritizes reliability and constructability.
+                  </p>
+                </div>
+              </div>
+              {/* Image on Right */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop"
+                  alt="Civil engineering design and blueprints"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Development Plans */}
+        {/* Development Plans - Image on Left */}
         <section id="development-plans" className="bg-mccarty-light py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Commercial, industrial and residential development plans</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
-                McCarty Engineering prepares detailed development plans for a wide range of projects. Our plans address everything from traffic flow and accessibility to drainage systems and utility coordination, all while meeting the requirements of local planning boards and state agencies. Our plans address every critical element of site development including:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Traffic flow and vehicular/pedestrian accessibility</li>
-                <li>Drainage and stormwater management systems</li>
-                <li>Utility coordination and infrastructure integration</li>
-                <li>Compliance with zoning, planning board, and state agency requirements</li>
-              </ul>
-              <p>
-                By coordinating closely with architects, contractors, and local officials, we help clients navigate the approval process efficiently. Our proactive approach identifies potential permitting challenges early, minimizing delays and ensuring each development plan aligns with long-term operational and environmental goals.
-              </p>
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image on Left */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/development-plans.jpg"
+                  alt="Development plans and site planning"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Text on Right */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Commercial, industrial and residential development plans</h2>
+                <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
+                  <p>
+                    McCarty Engineering prepares detailed development plans for a wide range of projects. Our plans address everything from traffic flow and accessibility to drainage systems and utility coordination, all while meeting the requirements of local planning boards and state agencies. Our plans address every critical element of site development including:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Traffic flow and vehicular/pedestrian accessibility</li>
+                    <li>Drainage and stormwater management systems</li>
+                    <li>Utility coordination and infrastructure integration</li>
+                    <li>Compliance with zoning, planning board, and state agency requirements</li>
+                  </ul>
+                  <p>
+                    By coordinating closely with architects, contractors, and local officials, we help clients navigate the approval process efficiently. Our proactive approach identifies potential permitting challenges early, minimizing delays and ensuring each development plan aligns with long-term operational and environmental goals.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Utility Design */}
+        {/* Utility Design - Image on Right */}
         <section id="utility-design" className="bg-white py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Utility design</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
-                Reliable utilities are the backbone of every successful development. We design and coordinate complete water, sewer, and electrical systems that meet current codes and support future capacity needs. Each design accounts for site elevation, flow rates, and material specifications to ensure safe, efficient, and maintainable infrastructure.
-              </p>
-              <p>
-                Our team integrates utility layouts with site grading and roadway systems to prevent conflicts and simplify construction sequencing. Whether designing new service connections or upgrading existing infrastructure, we focus on long-term functionality, durability, and ease of maintenance.
-              </p>
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text on Left */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Utility design</h2>
+                <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
+                  <p>
+                    Reliable utilities are the backbone of every successful development. We design and coordinate complete water, sewer, and electrical systems that meet current codes and support future capacity needs. Each design accounts for site elevation, flow rates, and material specifications to ensure safe, efficient, and maintainable infrastructure.
+                  </p>
+                  <p>
+                    Our team integrates utility layouts with site grading and roadway systems to prevent conflicts and simplify construction sequencing. Whether designing new service connections or upgrading existing infrastructure, we focus on long-term functionality, durability, and ease of maintenance.
+                  </p>
+                </div>
+              </div>
+              {/* Image on Right */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/utility-design.jpg"
+                  alt="Utility infrastructure and civil works"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Construction Monitoring */}
+        {/* Construction Monitoring - Image on Left */}
         <section id="construction-monitoring" className="bg-mccarty-light py-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Construction monitoring</h2>
-            <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
-              <p>
-                Effective construction monitoring bridges the gap between design and execution. Our engineers provide on-site oversight to verify that work aligns with approved plans, specifications, and permit conditions. This includes reviewing submittals, performing field inspections, and preparing compliance reports for regulatory agencies.
-              </p>
-              <p>
-                By maintaining open communication with contractors and owners, we ensure any design clarifications are addressed quickly to keep the project moving forward. This consistent oversight helps maintain quality control, protect the owner&apos;s investment, and deliver projects that meet every regulatory and technical requirement.
-              </p>
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image on Left */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"
+                  alt="Construction monitoring and site inspection"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Text on Right */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Construction monitoring</h2>
+                <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
+                  <p>
+                    Effective construction monitoring bridges the gap between design and execution. Our engineers provide on-site oversight to verify that work aligns with approved plans, specifications, and permit conditions. This includes reviewing submittals, performing field inspections, and preparing compliance reports for regulatory agencies.
+                  </p>
+                  <p>
+                    By maintaining open communication with contractors and owners, we ensure any design clarifications are addressed quickly to keep the project moving forward. This consistent oversight helps maintain quality control, protect the owner&apos;s investment, and deliver projects that meet every regulatory and technical requirement.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

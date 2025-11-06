@@ -2,11 +2,14 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ServiceCard } from "./service-card";
+import Link from "next/link";
 
 interface ServiceData {
   title: string;
   body: string;
   backgroundImage: string;
+  link?: string;
+  buttonText?: string;
 }
 
 interface ServicesOverlayProps {
@@ -65,9 +68,11 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
               <p className="text-sm md:text-base leading-relaxed text-white/90">
                 {currentService.body}
               </p>
-              <button className="mt-4 px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold uppercase text-sm transition-colors duration-200">
-                Our approach
-              </button>
+              {currentService.link && currentService.buttonText && (
+                <Link href={currentService.link} className="mt-4 inline-block px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold uppercase text-sm transition-colors duration-200">
+                  {currentService.buttonText}
+                </Link>
+              )}
             </div>
           </div>
         )}
