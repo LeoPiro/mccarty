@@ -208,14 +208,16 @@ export default function EngineeringPage() {
           </div>
         </section>
 
-        {/* CTA Section - Image Background with Overlay */}
+        {/* CTA Section - Video Background with Overlay */}
         <section className="relative w-full h-[600px] overflow-hidden">
-          {/* Full Width Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-pan"
-            style={{
-              backgroundImage: `url('/media/mccartyengineering.jpg')`,
-            }}
+          {/* Full Width Background Video */}
+          <video
+            className="absolute inset-0 h-full w-full object-cover object-bottom"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src="/media/Tree_clearing.mp4"
           />
 
           {/* Dark Text Box Overlay - Right Side */}
@@ -223,13 +225,13 @@ export default function EngineeringPage() {
             <div className="bg-[#3d3d3d] p-8 md:p-12 max-w-xl w-full md:w-auto">
               <div className="text-white space-y-6">
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight uppercase">
-                  Built on engineering precision
+                  From plans to performance
                 </h3>
                 <p className="text-sm md:text-base leading-relaxed text-white/90">
-                  A trusted leader in civil and site design, McCarty Engineering serves developers, owners, and contractors across New England. Guided by technical precision and practical experience, our team delivers comprehensive design, permitting and construction support services for commercial, industrial and residential projects. Each plan is thoughtfully engineered for performance, longevity and lasting value.
+                  McCarty Associates transforms our engineering designs into finished spaces through integrated construction management and site development expertise
                 </p>
-                <a href="/contact" className="mt-4 inline-block px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold uppercase text-sm transition-colors duration-200">
-                  Explore the McCarty Engineering difference →
+                <a href="/associates" className="mt-4 inline-block px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold uppercase text-sm transition-colors duration-200">
+                  Explore our construction management capabilities with McCarty Associates →
                 </a>
               </div>
             </div>

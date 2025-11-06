@@ -1,236 +1,186 @@
-# Task: Local Images, Service Links, and Hero Animation Fixes
+# Task: Local Images, Service Links, Hero Fixes, and Layout Reorganization
 
 ## Objective
-Download and implement local images for division pages, add links to service slideshow buttons, and fix hero text animation loading issues.
+Enhance the McCarty Companies website by replacing external images with local ones, updating the main page's services slideshow to link to specific division pages, fixing an intermittent hero text loading issue on division pages, removing images from Project Management and Construction Management sections, reorganizing content into 2x2 grids, and swapping CTA content between division pages.
 
-## Date
-November 6, 2025
+## Key Features Implemented
 
-## Changes Made
+### 1. Local Image Integration (8 Images Total)
 
-### 1. Local Images Downloaded and Implemented
+**McCarty Associates Page (`/associates`)**
+- **Site Inspections**:
+  - Original: `https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?w=800&h=600&fit=crop`
+  - Local: `/media/construction-site-inspection.jpg` (Source: [1streporting.com](https://1streporting.com/wp-content/uploads/2022/04/construction-site-insepction_edited.jpg))
+  - *Note: This image was downloaded manually due to automated download blocks.*
 
-#### Associates Page (`/associates`)
-Downloaded and integrated 6 local images:
+- **Site Clearing, Demolition, Recycling and Disposal**:
+  - Original: `https://images.unsplash.com/photo-1590849066058-77c2e1f4e06f?w=800&h=600&fit=crop`
+  - Local: `/media/Demolition-of-building-Everything-you-need-to-know-about-it.jpg` (Source: [housing.com](https://housing.com/news/wp-content/uploads/2022/11/Demolition-of-building-Everything-you-need-to-know-about-it.jpg))
+  - *Note: This image was downloaded manually due to automated download blocks.*
 
-1. **Site Inspections**
-   - File: `public/media/construction-site-inspection.jpg`
-   - Source: [1st Reporting](https://1streporting.com/wp-content/uploads/2022/04/construction-site-insepction_edited.jpg)
-   - Section: Site inspections
+- **Excavation, Grading and Earthwork**:
+  - Original: `https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop`
+  - Local: `/media/bulldozer-excavation.png` (Source: [earthmoverschool.com](https://earthmoverschool.com/wp-content/uploads/2023/12/bulldozer-course-7.png))
 
-2. **Site Clearing**
-   - File: `public/media/Demolition-of-building-Everything-you-need-to-know-about-it.jpg`
-   - Source: [Housing.com](https://housing.com/news/wp-content/uploads/2022/11/Demolition-of-building-Everything-you-need-to-know-about-it.jpg)
-   - Section: Site clearing, demolition, recycling and disposal
+- **Stormwater Drainage, Erosion Control and Retention Ponds**:
+  - Original: `https://images.unsplash.com/photo-1625248179005-ca91ab6e32e6?w=800&h=600&fit=crop`
+  - Local: `/media/industrial-drainage-channel.jpg` (Source: [hauraton.com](https://www.hauraton.com/wp-content/uploads/2020/11/industrial-drainage-channel.jpg?width=1400))
 
-3. **Excavation**
-   - File: `public/media/bulldozer-excavation.png`
-   - Source: [Earthmover School](https://earthmoverschool.com/wp-content/uploads/2023/12/bulldozer-course-7.png)
-   - Section: Excavation, grading and earthwork
+- **Roadbed Preparation, Construction and Utility Infrastructure**:
+  - Original: `https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop`
+  - Local: `/media/roadbed-preparation.jpg` (Source: [faulksbrothers.com](https://faulksbrothers.com/wp-content/uploads/2025/03/roadbed-preperation-003.jpg))
 
-4. **Stormwater Drainage**
-   - File: `public/media/industrial-drainage-channel.jpg`
-   - Source: [Hauraton](https://www.hauraton.com/wp-content/uploads/2020/11/industrial-drainage-channel.jpg?width=1400)
-   - Section: Stormwater drainage, erosion control and retention ponds
+- **General Contracting and Construction Management**:
+  - Original: `https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop`
+  - Local: `/media/construction-manager-group.png` (Source: [arch.tamu.edu](https://www.arch.tamu.edu/app/uploads/2025/03/construction-manager-with-group.png))
 
-5. **Roadbed Preparation**
-   - File: `public/media/roadbed-preparation.jpg`
-   - Source: [Faulks Brothers](https://faulksbrothers.com/wp-content/uploads/2025/03/roadbed-preperation-003.jpg)
-   - Section: Roadbed preparation, construction and utility infrastructure
+**McCarty Engineering Page (`/engineering`)**
+- **Commercial, Industrial and Residential Development Plans**:
+  - Original: `https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop`
+  - Local: `/media/development-plans.jpg` (Source: [biplanning.wordpress.com](https://biplanning.wordpress.com/wp-content/uploads/2014/02/picture1.jpg))
 
-6. **Construction Management**
-   - File: `public/media/construction-manager-group.png`
-   - Source: [Texas A&M Architecture](https://www.arch.tamu.edu/app/uploads/2025/03/construction-manager-with-group.png)
-   - Section: General contracting and construction management
+- **Utility Design**:
+  - Original: `https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop`
+  - Local: `/media/utility-design.jpg` (Source: [blackandmcdonald.com](https://blackandmcdonald.com/wp-content/uploads/Hero_en_OurServices_USR_CivilWorks.jpg))
 
-#### Engineering Page (`/engineering`)
-Downloaded and integrated 2 local images:
+### 2. Main Page Services Slideshow Links
 
-1. **Development Plans**
-   - File: `public/media/development-plans.jpg`
-   - Source: [BI Planning](https://biplanning.wordpress.com/wp-content/uploads/2014/02/picture1.jpg)
-   - Section: Commercial, industrial and residential development plans
+- **Objective**: Update the "Our approach" button in the `ServicesOverlay` component on the main page (`/`) to link to the relevant division page (`/associates` or `/engineering`) and display appropriate button text.
+- **Implementation**:
+  - Modified `capabilityData` in `app/page.tsx` to include `link` and `buttonText` properties for each service.
+  - Updated `ServiceData` interface in `app/(site)/components/services-overlay.tsx` to include `link?: string;` and `buttonText?: string;`.
+  - Modified `app/(site)/components/services-overlay.tsx` to conditionally render a `Link` component using `currentService.link` and `currentService.buttonText`.
+- **Mapping**:
+  - **McCarty Associates**: Site inspections, Project management, Landscape architecture, Site development, Construction management.
+  - **McCarty Engineering**: Civil engineering design, Commercial, industrial and residential development plans, Utility design, Construction monitoring.
 
-2. **Utility Design**
-   - File: `public/media/utility-design.jpg`
-   - Source: [Black & McDonald](https://blackandmcdonald.com/wp-content/uploads/Hero_en_OurServices_USR_CivilWorks.jpg)
-   - Section: Utility design
+### 3. Hero Text Animation Fix on Division Pages
 
-### 2. Service Slideshow Links Added
+- **Problem**: Intermittent issue where hero text on `/associates` and `/engineering` pages would not load on initial page view, only appearing after scrolling down and back up.
+- **Root Cause**: Framer Motion's `whileInView` animation with `viewport={{ once: true, amount: 0.4 }}` was causing the animation to not trigger if the element wasn't sufficiently in view on initial render.
+- **Solution**:
+  - Changed `whileInView` to `animate` in `app/(site)/associates/page.tsx` and `app/(site)/engineering/page.tsx` for the main hero text `motion.div`.
+  - Added a `delay: 0.2` to the `transition` property to allow the video to load first.
 
-Updated `app/page.tsx` and `app/(site)/components/services-overlay.tsx` to add division-specific links and button text to each service in the main page carousel.
+### 4. Project Management Section - Image Removal
 
-#### Link Mapping
+- **Objective**: Remove all images from the "Project management" section on the Associates page.
+- **Implementation**:
+  - Modified `app/(site)/associates/page.tsx` to remove the `Image` components and their surrounding `div` wrappers from the "Owner and investor representation", "Building owner and bank representation", and "Project remediation" subsections.
+  - The subsections now display as text-only blocks.
 
-**McCarty Associates Services (5):**
-- Site inspections → `/associates`
-- Project management → `/associates`
-- Landscape architecture → `/associates`
-- Site development → `/associates`
-- Construction management → `/associates`
+### 5. Site Development Section - Image Rework
 
-**McCarty Engineering Services (4):**
-- Civil engineering design → `/engineering`
-- Commercial, industrial and residential development plans → `/engineering`
-- Utility design → `/engineering`
-- Construction monitoring → `/engineering`
+- **Objective**: Place the `excavator_mccarty.png` image to the left of the "Site Development" header and remove all other images from the subsections within this div, ensuring the main image matches the styling of other images on the page.
+- **Implementation**:
+  - Modified `app/(site)/associates/page.tsx`:
+    - Moved the `excavator_mccarty.png` image to a new `div` that is part of a `grid md:grid-cols-2` layout with the "Site development" header and intro paragraph.
+    - Applied `h-[400px] rounded-lg overflow-hidden shadow-lg object-cover` to the `Image` component to match the styling of other images on the page.
+    - Removed the `Image` components and their surrounding `div` wrappers from the "Site clearing", "Excavation", "Stormwater", and "Roadbed" subsections.
 
-#### Technical Implementation
+### 6. Associates Page Layout Reorganization
 
-**Updated `app/page.tsx`:**
-```typescript
-const capabilityData = [
-  { 
-    title: "Site inspections", 
-    body: "...",
-    backgroundImage: "...",
-    link: "/associates",
-    buttonText: "McCarty Associates"
-  },
-  // ... other services
-];
-```
+**Objective**: Restructure the Associates page content sections into 2x2 grid layouts, remove images from Project Management and Construction Management sections, and create a custom vertical-centered layout for the Project Management section.
 
-**Updated `app/(site)/components/services-overlay.tsx`:**
-- Added `link` and `buttonText` optional properties to `ServiceData` interface
-- Added `import Link from "next/link"`
-- Changed button from `<button>` to `<Link>` component with conditional rendering:
-```typescript
-{currentService.link && currentService.buttonText && (
-  <Link href={currentService.link} className="...">
-    {currentService.buttonText}
-  </Link>
-)}
-```
+**Construction Management Images Removed:**
+- Modified `app/(site)/associates/page.tsx`
+- All images removed from the Construction Management section
+- Subsections converted to text-only blocks: Estimating and scheduling, Value engineering, Design/build contracting, General contracting and construction management
+- Organized into `grid md:grid-cols-2 gap-12` layout
 
-### 3. Hero Text Animation Loading Fix
+**Site Development 2x2 Grid:**
+- Modified `app/(site)/associates/page.tsx`
+- Reorganized into `grid md:grid-cols-2 gap-12`
+- Top Left: Site clearing, demolition, recycling and disposal
+- Top Right: Excavation, grading and earthwork
+- Bottom Left: Stormwater drainage, erosion control and retention ponds
+- Bottom Right: Roadbed preparation, construction and utility infrastructure
+- Centered closing paragraph below the grid
 
-#### Problem
-Hero text on `/associates` and `/engineering` pages sometimes didn't appear on initial page load. Text would only show after scrolling down and back up.
+**Construction Management 2x2 Grid:**
+- Modified `app/(site)/associates/page.tsx`
+- Reorganized into `grid md:grid-cols-2 gap-12`
+- Top Left: Estimating and scheduling
+- Top Right: Value engineering
+- Bottom Left: Design/build contracting
+- Bottom Right: General contracting and construction management
 
-#### Root Cause
-Pages were using `whileInView` with `viewport={{ once: true, amount: 0.4 }}`, which required 40% of the element to be visible in the viewport before triggering. On initial load, the viewport detection sometimes failed.
+**Project Management Custom Grid Layout:**
+- Modified `app/(site)/associates/page.tsx`
+- Grid Configuration:
+  - Grid columns: `md:grid-cols-[1fr_1.2fr]` (left column narrower than right)
+  - Gap: `gap-x-16 gap-y-8` (wider horizontal gap, tighter vertical)
+  - Container: `max-w-5xl mx-auto` (centered, constrained width)
+- Layout:
+  - Left column (top): Owner and investor representation
+    - Styling: `flex items-center justify-end` (right-aligned)
+  - Right column (center): Building owner and bank representation, contract fulfillment and funds dispersal
+    - Styling: `md:row-span-2 flex items-center` (spans 2 rows, vertically centered)
+  - Left column (bottom): Project remediation and recovery consultation
+    - Styling: `flex items-center justify-end` (right-aligned)
+- Result: Right column content is vertically centered between the two left column items, creating an asymmetric but balanced layout
 
-#### Solution
-Changed hero text animations from `whileInView` to `animate` on both pages:
+### 7. CTA Section Content Swap Between Pages
 
-**Associates Page (`app/(site)/associates/page.tsx`):**
-```typescript
-// BEFORE
-<motion.div
-  initial={{ opacity: 0, y: 24 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.4 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
->
+**Objective**: Swap the CTA (Call-to-Action) content and links between the Associates and Engineering pages so each page promotes the other division, creating cross-referencing between the two divisions.
 
-// AFTER
-<motion.div
-  initial={{ opacity: 0, y: 24 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
->
-```
+**Associates Page CTA** (`app/(site)/associates/page.tsx`):
+- **Headline**: "Built on engineering precision"
+- **Body**: "A trusted leader in civil and site design, McCarty Engineering serves developers, owners, and contractors across New England. Guided by technical precision and practical experience, our team delivers comprehensive design, permitting and construction support services for commercial, industrial and residential projects. Each plan is thoughtfully engineered for performance, longevity and lasting value."
+- **Button**: "Explore the McCarty Engineering difference →" 
+- **Link**: `/engineering`
+- **Background**: `/media/mccartyengineering.jpg` with `animate-pan` class for movement
 
-**Engineering Page (`app/(site)/engineering/page.tsx`):**
-Applied the same fix with `animate` instead of `whileInView` and added a 0.2s delay.
+**Engineering Page CTA** (`app/(site)/engineering/page.tsx`):
+- **Headline**: "From plans to performance"
+- **Body**: "McCarty Associates transforms our engineering designs into finished spaces through integrated construction management and site development expertise"
+- **Button**: "Explore our construction management capabilities with McCarty Associates →"
+- **Link**: `/associates`
+- **Background**: Changed from static image to video
+  - Video: `/media/Tree_clearing.mp4`
+  - Properties: `autoPlay muted loop playsInline`
+  - Positioning: `object-cover object-bottom` (focuses on bottom portion of video)
 
-## Files Modified
-
-### Core Files
-1. `app/page.tsx` - Added link and buttonText properties to capabilityData
-2. `app/(site)/components/services-overlay.tsx` - Updated to support links and dynamic button text
-3. `app/(site)/associates/page.tsx` - Updated 6 images to local files, fixed hero animation
-4. `app/(site)/engineering/page.tsx` - Updated 2 images to local files, fixed hero animation
-
-### New Media Files
-- `public/media/construction-site-inspection.jpg`
-- `public/media/Demolition-of-building-Everything-you-need-to-know-about-it.jpg`
-- `public/media/bulldozer-excavation.png`
-- `public/media/industrial-drainage-channel.jpg`
-- `public/media/roadbed-preparation.jpg`
-- `public/media/construction-manager-group.png`
-- `public/media/development-plans.jpg`
-- `public/media/utility-design.jpg`
-
-## Configuration Changes
-
-### Next.js Image Configuration
-Initially added `www.hauraton.com` to `next.config.ts` `images.remotePatterns` but later removed it after downloading the image locally.
-
-Final configuration remains:
-```typescript
-images: {
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'images.unsplash.com',
-    },
-  ],
-}
-```
-
-## Testing & Validation
-
-### Before Changes
-- [ ] Some division page images were placeholder Unsplash photos
-- [ ] Service slideshow buttons labeled "Our approach" with no functionality
-- [ ] Hero text intermittently failed to load on division pages
-
-### After Changes
-- [x] All division page images are locally hosted and content-appropriate
-- [x] Service slideshow buttons link to correct division pages with proper labels
-- [x] Hero text loads consistently on every page load
-- [x] All images optimized through Next.js Image component
-- [x] No external image dependencies (except Unsplash for team/project photos)
-
-## Troubleshooting Notes
-
-### Server Crashes During Image Changes
-During implementation, the dev server crashed when adding local images. Resolution:
-1. Cleared `.next` cache: `Remove-Item -Recurse -Force .next`
-2. Killed lingering Node processes
-3. Restarted dev server fresh
-
-### Image Download Failures
-Some websites (Housing.com) blocked automated downloads via curl. These required manual download through browser.
-
-## Benefits
-
-1. **Performance**: Local images load faster and don't depend on external servers
-2. **Reliability**: Images won't break if external sources remove/change them
-3. **User Experience**: Service buttons now provide clear navigation to division pages
-4. **Consistency**: Hero text now reliably appears on every page load
-5. **Content Quality**: Images are specific to their sections rather than generic stock photos
+**Result:**
+- Associates page now promotes Engineering division
+- Engineering page now promotes Associates division
+- Each page cross-links to the other, creating better navigation flow
+- Engineering page features dynamic video background for enhanced visual appeal
 
 ## Success Criteria
-- [x] 8 local images downloaded and integrated across division pages
-- [x] All service slideshow buttons link to appropriate division pages
-- [x] Button text clearly identifies which McCarty division provides each service
-- [x] Hero text animations work consistently on all page loads
-- [x] No external image hosting dependencies for division page content images
-- [x] All images render correctly with Next.js Image optimization
-- [x] Dev server stable after changes
-- [x] Documentation updated
+- [x] 8 external images replaced with local files on Associates and Engineering pages
+- [x] All service slideshow items on main page link to appropriate division pages
+- [x] Service slideshow buttons display correct division names
+- [x] Hero text animation fixed on division pages (no longer intermittent)
+- [x] All images removed from Project Management section on Associates page
+- [x] All images removed from Construction Management section on Associates page
+- [x] Site Development section on Associates page restructured with excavator image and subsection images removed
+- [x] Excavator image properly styled and positioned on Associates page
+- [x] Site Development section reorganized into 2x2 grid layout
+- [x] Construction Management section reorganized into 2x2 grid layout
+- [x] Project Management section reorganized with custom grid and vertical centering
+- [x] CTA content swapped between Associates and Engineering pages
+- [x] CTA links updated to cross-reference between division pages
+- [x] Associates page CTA background updated to mccartyengineering.jpg
+- [x] Engineering page CTA background changed to Tree_clearing.mp4 video
+- [x] Video positioning optimized with object-bottom
+- [x] No external image dependencies remain
+- [x] Local image files successfully downloaded and integrated
+- [x] All links and navigation function correctly
 
-## Future Considerations
-
-### Potential Improvements
-1. Add section-specific anchor links (e.g., `/associates#site-inspections`) for direct navigation
-2. Consider adding more local images to replace remaining Unsplash placeholders
-3. Implement image lazy loading optimization for performance
-4. Add alt text improvements for better accessibility
-5. Consider WebP conversion for additional file size optimization
-
-### Maintenance Notes
-- Local images are stored in `public/media/`
-- Image sources documented above for reference
-- All images should be reviewed periodically for licensing compliance
-- Consider creating a backup of all local images
+## Notes & Dependencies
+- **Image Sourcing**: All images were sourced from external URLs and downloaded locally to the `public/media/` directory.
+- **Manual Downloads**: Some images (`construction-site-inspection.jpg` and `Demolition-of-building-Everything-you-need-to-know-about-it.jpg`) required manual download due to website security measures blocking automated downloads.
+- **Next.js Image Configuration**: The `images.remotePatterns` in `next.config.ts` was temporarily updated to allow external image domains during development, then cleaned up by removing those entries after images were saved locally.
+- **Animation**: The `animate-pan` keyframes are defined in `app/globals.css` and applied to CTA background images.
+- **Hero Animation Fix**: Changed from `whileInView` to `animate` with delay to ensure text loads consistently on initial page view.
+- **Service Links**: Main page services now link to division pages instead of just having placeholder buttons.
+- **Grid Layouts**: All major content sections on Associates page now use consistent 2x2 grid layouts for better visual organization and readability.
+- **Video Background**: Engineering page CTA section uses HTML5 video element with `object-bottom` positioning to focus on lower portion of video content.
+- **Cross-Referencing**: CTA sections on both division pages now promote the other division, creating a cohesive navigation flow between Engineering and Associates.
 
 ## Related Documentation
 - [Task 01: Change Logo](./01-change-logo.md)
 - [Task 02: Reorder Services and Proof Counters](./02-reorder-services-proof-counters.md)
 - [Task 03: Here's How Section and Services Overlay](./03-here-how-section-services-overlay.md)
 - [Task 04: Division Pages and CTA Sections](./04-division-pages-cta-sections.md)
-
