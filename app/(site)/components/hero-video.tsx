@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 
 export function HeroVideo() {
   const reduce = useReducedMotion();
@@ -35,7 +36,7 @@ export function HeroVideo() {
         <div>
           <h1 className="text-4xl md:text-6xl font-semibold text-balance">A better way to build</h1>
           <p className="mt-4 max-w-2xl text-lg opacity-90">Integrated design and construction — from start to finish</p>
-          <a href="/contact" className="mt-8 inline-block rounded-md bg-white text-mccarty-dark px-6 py-3 font-medium hover:bg-mccarty-light transition-colors">Start your project</a>
+          <Link href="/projects" className="mt-8 inline-block rounded-md bg-white text-mccarty-dark px-6 py-3 font-medium hover:bg-mccarty-light transition-colors">See Our Work</Link>
         </div>
       </motion.div>
     </section>

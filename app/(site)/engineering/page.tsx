@@ -105,7 +105,7 @@ export default function EngineeringPage() {
               {/* Image on Right */}
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop"
+                  src="/media/civil engineering design.jpg"
                   alt="Civil engineering design and blueprints"
                   fill
                   className="object-cover"
@@ -169,7 +169,7 @@ export default function EngineeringPage() {
               {/* Image on Right */}
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/media/utility-design.jpg"
+                  src="/media/util_design_frompdf.png"
                   alt="Utility infrastructure and civil works"
                   fill
                   className="object-cover"
@@ -186,7 +186,7 @@ export default function EngineeringPage() {
               {/* Image on Left */}
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"
+                  src="/media/construction monitoring.JPG"
                   alt="Construction monitoring and site inspection"
                   fill
                   className="object-cover"
