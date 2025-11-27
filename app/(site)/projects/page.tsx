@@ -236,7 +236,7 @@ export default function ProjectsPage() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/media/werferninside_compressed.mp4" type="video/mp4" />
+            <source src="/media/werferninside_10s.mp4" type="video/mp4" />
           </video>
           
           {/* Dark Overlay for contrast */}
