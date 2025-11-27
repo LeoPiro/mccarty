@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { ServiceCard } from "./service-card";
 import Link from "next/link";
 
 interface ServiceData {
@@ -45,15 +44,27 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
   }
 
   const currentService = services[currentIndex];
+  
+  // Custom background position for specific services
+  const getBackgroundPosition = () => {
+    if (currentService.title === "Site inspections") {
+      return "center bottom"; // Focus all the way to the bottom
+    }
+    if (currentService.title === "Project management") {
+      return "center 60%"; // Focus down 60% from top
+    }
+    return "center";
+  };
 
   return (
     <div className="relative w-full h-[600px] overflow-hidden">
       {/* Full Width Background Image */}
       <div 
         key={currentIndex}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out animate-pan"
+        className="absolute inset-0 bg-cover bg-no-repeat transition-all duration-700 ease-in-out animate-pan"
         style={{
           backgroundImage: `url('${currentService.backgroundImage}')`,
+          backgroundPosition: getBackgroundPosition(),
         }}
       />
 

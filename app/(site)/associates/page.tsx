@@ -105,7 +105,7 @@ export default function AssociatesPage() {
               {/* Image on Right */}
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/media/construction-site-inspection.jpg"
+                  src="/media/site inspections.jpg"
                   alt="Construction site inspection professional"
                   fill
                   className="object-cover"

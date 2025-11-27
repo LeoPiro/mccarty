@@ -256,27 +256,38 @@ export default function MeetTheTeamPage() {
         {/* Team Grid */}
         <section className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredMembers.map((member) => (
-              <div
-                key={member.id}
-                onClick={() => setSelectedMember(member)}
-                className="group cursor-pointer bg-white rounded-xl overflow-hidden border border-mccarty-light shadow-sm hover:shadow-lg transition-all duration-300"
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            {filteredMembers.map((member) => {
+              // Check if bio is just a short default bio (less than 200 characters)
+              const hasDetailedBio = member.bio.length > 200;
+              
+              return (
+                <div
+                  key={member.id}
+                  onClick={() => hasDetailedBio && setSelectedMember(member)}
+                  className={`group bg-white rounded-xl overflow-hidden border border-mccarty-light shadow-sm transition-all duration-300 ${
+                    hasDetailedBio ? 'cursor-pointer hover:shadow-lg' : 'cursor-default'
+                  }`}
+                >
+                  <div className="relative h-80 overflow-hidden">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className={`object-cover transition-transform duration-500 ${
+                        hasDetailedBio ? 'group-hover:scale-105' : ''
+                      }`}
+                    />
+                    {hasDetailedBio && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-mccarty-dark mb-1">{member.name}</h3>
+                    <p className="text-sm text-mccarty-medium">{member.title}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-mccarty-dark mb-1">{member.name}</h3>
-                  <p className="text-sm text-mccarty-medium">{member.title}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
