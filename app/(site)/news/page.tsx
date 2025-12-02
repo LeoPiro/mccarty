@@ -70,7 +70,7 @@ export default function NewsPage() {
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">News and Recognition</h1>
               <p className="text-xl md:text-2xl text-mccarty-light max-w-3xl mx-auto">
-                Industry recognition and project highlights showcasing McCarty Companies' commitment to excellence in engineering and construction
+                Industry recognition and project highlights showcasing McCarty Companies&apos; commitment to excellence in engineering and construction
               </p>
             </motion.div>
           </div>
@@ -137,11 +137,11 @@ function NewsSection({ item, index }: { item: NewsItem; index: number }) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className={`bg-[#3d3d3d]/90 backdrop-blur-sm p-5 md:p-10 ${boxWidth} w-full md:w-auto shadow-2xl`}
+          className={`bg-neutral-700/90 backdrop-blur-sm p-5 md:p-10 ${boxWidth} w-full md:w-auto shadow-2xl`}
         >
           <div className="text-white space-y-3 md:space-y-6">
             {/* Small text above */}
-            <p className="text-[10px] md:text-sm uppercase tracking-wider text-white/70">
+            <p className="text-xs md:text-sm uppercase tracking-wider text-white/70">
               {item.smallText}
             </p>
             
