@@ -17,64 +17,64 @@ export default function Home() {
       title: "Site inspections", 
       body: "Comprehensive site evaluations and inspections to ensure compliance and quality throughout every phase of your project.",
       backgroundImage: "/media/site inspections.jpg",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/associates",
+      buttonText: "McCarty Associates"
     },
     { 
       title: "Project management", 
       body: "Schedule, budget, quality, and stakeholder coordination executed with precision from concept to completion.",
       backgroundImage: "/media/project management_3.JPG",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/associates",
+      buttonText: "McCarty Associates"
     },
     { 
       title: "Landscape architecture", 
       body: "Thoughtful landscape design and planning that enhances aesthetics while meeting regulatory requirements and environmental goals.",
       backgroundImage: "https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/associates",
+      buttonText: "McCarty Associates"
     },
     { 
       title: "Civil engineering design", 
       body: "Expert civil engineering solutions for site development, infrastructure, and utilities tailored to your project needs.",
       backgroundImage: "/media/civil engineering design.jpg",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/engineering",
+      buttonText: "McCarty Engineering"
     },
     { 
       title: "Commercial, industrial and residential development plans", 
       body: "Complete development planning and design services for commercial, industrial, and residential projects of any scale.",
       backgroundImage: "/media/commercial, residential.jpg",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/engineering",
+      buttonText: "McCarty Engineering"
     },
     { 
       title: "Utility design", 
       body: "Comprehensive water, wastewater, stormwater, and utility infrastructure design for reliable and efficient systems.",
       backgroundImage: "/media/utility design 3.JPG",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/engineering",
+      buttonText: "McCarty Engineering"
     },
     { 
       title: "Construction monitoring", 
       body: "Ongoing construction oversight and quality assurance to ensure your project stays on track and meets all specifications.",
       backgroundImage: "/media/construction_monitoring.png",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/engineering",
+      buttonText: "McCarty Engineering"
     },
     { 
       title: "Site development", 
       body: "Full-scale site development services including grading, drainage, utilities, and infrastructure design.",
       backgroundImage: "/media/Site development 2.jpg",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/associates",
+      buttonText: "McCarty Associates"
     },
     { 
       title: "Construction management", 
       body: "Expert construction management ensuring seamless coordination, cost control, and timely delivery of your project.",
       backgroundImage: "/media/construction management.jpg",
-      link: "/projects",
-      buttonText: "See Our Work"
+      link: "/associates",
+      buttonText: "McCarty Associates"
     },
   ];
 
