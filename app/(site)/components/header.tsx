@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 const nav = [
 	{ href: "/projects", label: "Our work" },
 	{ href: "/about", label: "Meet our team" },
-	{ href: "#", label: "News and recognition" },
+	{ href: "/news", label: "News and recognition" },
 ];
 
 const divisions = [

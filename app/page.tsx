@@ -23,7 +23,7 @@ export default function Home() {
     { 
       title: "Project management", 
       body: "Schedule, budget, quality, and stakeholder coordination executed with precision from concept to completion.",
-      backgroundImage: "/media/project management 2.PNG",
+      backgroundImage: "/media/project management_3.JPG",
       link: "/projects",
       buttonText: "See Our Work"
     },
@@ -58,7 +58,7 @@ export default function Home() {
     { 
       title: "Construction monitoring", 
       body: "Ongoing construction oversight and quality assurance to ensure your project stays on track and meets all specifications.",
-      backgroundImage: "/media/construction monitoring.JPG",
+      backgroundImage: "/media/construction_monitoring.png",
       link: "/projects",
       buttonText: "See Our Work"
     },

@@ -53,6 +53,9 @@ export function ServicesOverlay({ services }: ServicesOverlayProps) {
     if (currentService.title === "Project management") {
       return "center 60%"; // Focus down 60% from top
     }
+    if (currentService.title === "Construction management") {
+      return "center 10%"; // Focus on upper portion
+    }
     return "center";
   };
 
