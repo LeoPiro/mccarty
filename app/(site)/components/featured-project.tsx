@@ -10,7 +10,7 @@ export function FeaturedProject() {
       </div>
       
       <div className="relative group w-full">
-        <Link href="/projects" className="block">
+        <Link href="/projects/werfern" className="block">
           <div className="relative h-[600px] overflow-hidden w-full">
             <Image
               src="/Recent work.jpg"
