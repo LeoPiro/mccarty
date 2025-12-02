@@ -79,7 +79,7 @@ export default function OurWorkPage() {
         <section className="py-16">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
+              {projects.map((project) => (
                 <div
                   key={project.id}
                   className="group"
@@ -103,7 +103,7 @@ export default function OurWorkPage() {
         <section className="bg-mccarty-dark text-white py-20">
           <div className="mx-auto max-w-6xl px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's build something remarkable together
+              Let&apos;s build something remarkable together
             </h2>
             <p className="text-xl text-mccarty-light mb-8 max-w-2xl mx-auto">
               From concept to completion, McCarty Companies brings engineering expertise and construction excellence to every project
