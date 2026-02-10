@@ -25,32 +25,28 @@ export default function OurWorkPage() {
       link: "/projects/werfern"
     },
     {
-      id: "mixed-use-development",
-      title: "Urban mixed-use development",
-      category: "Commercial",
-      location: "Boston, Massachusetts",
-      image: "/media/commercial, residential.jpg",
+      id: "boston-lawnmower",
+      title: "Boston Lawnmower",
+      category: "Retail",
+      location: "Westborough, Massachusetts",
+      image: "/media/projects/boston-lawnmower/exterior.webp",
+      link: "/projects/boston-lawnmower"
     },
     {
-      id: "infrastructure-project",
-      title: "Regional infrastructure expansion",
-      category: "Infrastructure",
-      location: "Worcester, Massachusetts",
-      image: "/media/Site development 2.jpg",
-    },
-    {
-      id: "industrial-facility",
-      title: "Advanced manufacturing facility",
+      id: "gerrity-stone",
+      title: "Gerrity Stone fabrication facility",
       category: "Industrial",
-      location: "Springfield, Massachusetts",
-      image: "/media/construction management.jpg",
+      location: "Wilmington, Massachusetts",
+      image: "/media/projects/gerrity-stone/overview.jpg",
+      link: "/projects/gerrity-stone"
     },
     {
-      id: "utility-upgrade",
-      title: "Municipal utility modernization",
-      category: "Utilities",
-      location: "Cambridge, Massachusetts",
-      image: "/media/utility design 3.JPG",
+      id: "patrick-motor-group",
+      title: "Patrick Motor Group",
+      category: "Automotive",
+      location: "Auburn, Massachusetts",
+      image: "/media/projects/patrick-motor/auburn-drone.webp",
+      link: "/projects/patrick-motor-group"
     }
   ];
 
