@@ -181,6 +181,38 @@ const teamMembers = [
     image: "/media/Headshots/Robert_D'Onfro.jpg",
     bio: "Robert D'Onfro serves as Site Foreman at McCarty Associates, bringing expertise in field operations and crew management to ensure projects are executed safely and efficiently.",
     division: "Construction"
+  },
+  {
+    id: 23,
+    name: "Patrick Houssan",
+    title: "Landscape Architect 1",
+    image: "/media/Headshots/Patrick_Houssan.jpg",
+    bio: "",
+    division: "Engineering"
+  },
+  {
+    id: 24,
+    name: "Andrew Lemoine",
+    title: "Laborer",
+    image: "/media/Headshots/Andrew_Lemoine.jpg",
+    bio: "",
+    division: "Construction"
+  },
+  {
+    id: 25,
+    name: "Craig Lemoine",
+    title: "Superintendent",
+    image: "/media/Headshots/Craig_Lemoine.jpg",
+    bio: "",
+    division: "Construction"
+  },
+  {
+    id: 26,
+    name: "Jerry Maldonado",
+    title: "Laborer",
+    image: "/media/Headshots/Jerry_Maldonado.jpg",
+    bio: "",
+    division: "Construction"
   }
 ];
 
@@ -324,7 +356,7 @@ export default function MeetTheTeamPage() {
                       src={selectedMember.image}
                       alt={selectedMember.name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-right"
                     />
                   </div>
                   <div className="p-8 md:p-12">
