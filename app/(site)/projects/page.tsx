@@ -47,6 +47,14 @@ export default function OurWorkPage() {
       location: "Auburn, Massachusetts",
       image: "/media/projects/patrick-motor/auburn-drone.webp",
       link: "/projects/patrick-motor-group"
+    },
+    {
+      id: "smc",
+      title: "SMC, Ltd.",
+      category: "Manufacturing",
+      location: "Devens, Massachusetts",
+      image: "/media/projects/smc/window.jpg",
+      link: "/projects/smc"
     }
   ];
 
