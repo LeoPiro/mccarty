@@ -25,16 +25,8 @@ export default function GerriryStoneProjectPage() {
       alt: "Gerrity Stone facility exterior"
     },
     {
-      src: "/media/projects/gerrity-stone/exterior-2.png",
-      alt: "Gerrity Stone facility exterior view"
-    },
-    {
-      src: "/media/projects/gerrity-stone/cranes.jpg",
-      alt: "Gerrity Stone overhead cranes"
-    },
-    {
-      src: "/media/projects/gerrity-stone/interior.jpg",
-      alt: "Gerrity Stone production interior"
+      src: "/media/projects/gerrity-stone/building-aerial.jpg",
+      alt: "Gerrity Stone facility aerial view"
     },
     {
       src: "/media/projects/gerrity-stone/interior-3.jpg",
