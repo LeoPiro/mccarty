@@ -29,6 +29,10 @@ export default function GerriryStoneProjectPage() {
       alt: "Gerrity Stone facility aerial view"
     },
     {
+      src: "/media/projects/gerrity-stone/showroom.jpg",
+      alt: "Gerrity Stone showroom and slab storage"
+    },
+    {
       src: "/media/projects/gerrity-stone/interior-3.jpg",
       alt: "Gerrity Stone fabrication area"
     }
