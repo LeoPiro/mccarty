@@ -29,7 +29,7 @@ export default function OurWorkPage() {
       title: "Boston Lawnmower",
       category: "Retail",
       location: "Westborough, Massachusetts",
-      image: "/media/projects/boston-lawnmower/exterior.webp",
+      image: "/media/projects/boston-lawnmower/exterior.jpg",
       link: "/projects/boston-lawnmower"
     },
     {

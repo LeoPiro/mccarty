@@ -21,20 +21,28 @@ export default function BostonLawnmowerProjectPage() {
 
   const images = [
     {
-      src: "/media/projects/boston-lawnmower/front-right-perspective.png",
-      alt: "Boston Lawnmower front right perspective"
+      src: "/media/projects/boston-lawnmower/showroom-overview.jpg",
+      alt: "Boston Lawnmower full showroom overview"
     },
     {
-      src: "/media/projects/boston-lawnmower/interior.webp",
-      alt: "Boston Lawnmower interior showroom"
+      src: "/media/projects/boston-lawnmower/showroom-mowers.jpg",
+      alt: "Boston Lawnmower showroom floor display"
     },
     {
-      src: "/media/projects/boston-lawnmower/interior-2.webp",
-      alt: "Boston Lawnmower interior service area"
+      src: "/media/projects/boston-lawnmower/showroom-ariens.jpg",
+      alt: "Boston Lawnmower Ariens display area"
     },
     {
-      src: "/media/projects/boston-lawnmower/interior-3.webp",
-      alt: "Boston Lawnmower interior workspace"
+      src: "/media/projects/boston-lawnmower/showroom-gravely.jpg",
+      alt: "Boston Lawnmower Gravely showroom and counter"
+    },
+    {
+      src: "/media/projects/boston-lawnmower/counter.jpg",
+      alt: "Boston Lawnmower service counter"
+    },
+    {
+      src: "/media/projects/boston-lawnmower/construction.jpg",
+      alt: "Boston Lawnmower building under construction"
     }
   ];
 
@@ -57,7 +65,7 @@ export default function BostonLawnmowerProjectPage() {
             style={{ y: imageY }}
           >
             <Image
-              src="/media/projects/boston-lawnmower/exterior.webp"
+              src="/media/projects/boston-lawnmower/exterior.jpg"
               alt="Boston Lawnmower exterior"
               fill
               className="object-cover object-center animate-pan"
@@ -249,7 +257,7 @@ export default function BostonLawnmowerProjectPage() {
         <section className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/media/projects/boston-lawnmower/front-right-perspective.png"
+              src="/media/projects/boston-lawnmower/showroom-overview.jpg"
               alt="Boston Lawnmower building"
               fill
               className="object-cover"
