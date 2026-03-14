@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "McCarty | Building & Development",
+  title: "Commercial Design-Build & Civil Engineering Firm | McCarty Companies MA",
   description: "Modern construction and development portfolio.",
   icons: {
     icon: [
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     shortcut: "/mccarty-logo.jpg",
   },
   openGraph: {
-    title: "McCarty | Building & Development",
+    title: "Commercial Design-Build & Civil Engineering Firm | McCarty Companies MA",
     description: "Modern construction and development portfolio.",
     type: "website",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: "McCarty OpenGraph" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "McCarty | Building & Development",
+    title: "Commercial Design-Build & Civil Engineering Firm | McCarty Companies MA",
     description: "Modern construction and development portfolio.",
     images: ["/og.svg"],
   },

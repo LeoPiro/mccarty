@@ -29,7 +29,7 @@ export function Footer() {
             <Link href="/">
               <Image
                 src="/mccarty-logo.jpg"
-                alt="McCarty Companies Logo"
+                alt="McCarty Companies integrated civil engineering and construction firm based in Massachusetts"
                 width={180}
                 height={45}
                 className="h-12 w-auto"

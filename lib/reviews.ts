@@ -11,7 +11,7 @@ export const reviews: Review[] = [
     author: "SMC, Ltd.",
   },
   {
-    quote: "McCarty & Associates exceeded all our expectations throughout the building process. What truly set them apart was the owners' engaged and hands-on approach. This dedication ensured the entire process and end result not only met, but far surpassed what we had hoped for.",
+    quote: "McCarty Associates exceeded all our expectations throughout the building process. What truly set them apart was the owners' engaged and hands-on approach. This dedication ensured the entire process and end result not only met, but far surpassed what we had hoped for.",
     author: "Epic Polymer Solutions",
   },
   {

@@ -11,6 +11,7 @@ interface NewsItem {
   headline: string;
   copy: string;
   image: string;
+  alt: string;
   link: string;
   imagePosition: "left" | "right";
 }
@@ -21,8 +22,9 @@ export default function NewsPage() {
       id: "nec-june-2024",
       smallText: "New England Construction — June 2024",
       headline: "McCarty Associates performs equal cut and fill earthmoving at Devens site",
-      copy: "New England Construction spotlighted McCarty Associates for its site development work on a 232,320-square-foot pre-engineered industrial building at the former Fort Devens military installation. The feature highlights McCarty's expertise in balanced cut-and-fill earthwork, historic fill removal, stormwater controls, and overall site preparation for a large industrial facility. The project demonstrates McCarty's capabilities in managing complex soil conditions, regulatory requirements, and tight development constraints — reinforcing the firm's reputation as a trusted construction and site development partner across Massachusetts and the greater New England region.",
+      copy: "New England Construction spotlighted McCarty Associates for its site development work on a 232,320-square-foot pre-engineered industrial building at the former Fort Devens military installation. The feature highlights McCarty Associates' expertise in balanced cut-and-fill earthwork, historic fill removal, stormwater controls, and overall site preparation for a large industrial facility. The project demonstrates McCarty Associates' capabilities in managing complex soil conditions, regulatory requirements, and tight development constraints — reinforcing the firm's reputation as a trusted construction and site development partner across Massachusetts and the greater New England region.",
       image: "/media/nar_1.jpg",
+      alt: "Earthmoving and site development work by McCarty Associates at the Devens Massachusetts industrial site",
       link: "https://acppubs.com/NEC/article/0C34C900-mccarty-associates-performs-equal-cut-and-fill-earthmoving-for-pre-engineered-industrial-building-in-massachusetts",
       imagePosition: "right"
     },
@@ -30,8 +32,9 @@ export default function NewsPage() {
       id: "nec-july-2022",
       smallText: "New England Construction — July 2022",
       headline: "McCarty Companies' third design-build project in West Boylston underway",
-      copy: "In West Boylston, Massachusetts, McCarty Companies has commenced its third design-build project on Hartwell Street, a 101,200 square-foot facility with a 10,000-square-foot structural steel mezzanine. The team delivers full-service support, including civil engineering, site permitting, utility installation, drainage systems, and structural erection. This project highlights McCarty's end-to-end design-build capabilities and their expertise in delivering large-scale industrial and commercial construction across the New England region.",
+      copy: "In West Boylston, Massachusetts, McCarty Companies has commenced its third design-build project on Hartwell Street, a 101,200 square-foot facility with a 10,000-square-foot structural steel mezzanine. The team delivers full-service support, including civil engineering, site permitting, utility installation, drainage systems, and structural erection through McCarty Engineering and McCarty Associates. This project highlights McCarty Companies' end-to-end design-build capabilities and their expertise in delivering large-scale industrial and commercial construction across the New England region.",
       image: "/media/nar_2.jpg",
+      alt: "Design-build commercial construction project by McCarty Companies in West Boylston Massachusetts",
       link: "https://acppubs.com/NEC/article/2727C7F7-mccarty-companies-third-design-build-project-in-west-boylston-underway",
       imagePosition: "left"
     },
@@ -39,8 +42,9 @@ export default function NewsPage() {
       id: "nec-august-2021",
       smallText: "New England Construction — August 2021",
       headline: "Wilmington project signals back to normal for McCarty Companies",
-      copy: "On a 16-acre tract in Wilmington, Massachusetts, McCarty Companies is developing a major commercial site featuring a one-acre pre-engineered metal building and comprehensive full-site civil work. This project comes after the industry slowdown triggered by COVID-19, and it marks McCarty's strong rebound — handling everything from demolition of existing structures, to stone processing, earthmoving, utility installation, and full building erection.",
+      copy: "On a 16-acre tract in Wilmington, Massachusetts, McCarty Companies is developing a major commercial site featuring a one-acre pre-engineered metal building and comprehensive full-site civil work. The team delivers full-service support, including civil engineering, site permitting, utility installation, drainage systems, and structural erection. This project highlights McCarty Companies' end-to-end design-build capabilities and their expertise in delivering large-scale industrial and commercial construction across the New England region.",
       image: "/media/nar_3.jpg",
+      alt: "Commercial site development and excavation project in Wilmington Massachusetts by McCarty Companies",
       link: "https://acppubs.com/NEC/article/0AEB87F5-wilmington-project-signals-back-to-normal-for-mccarty-companies",
       imagePosition: "right"
     },
@@ -50,6 +54,7 @@ export default function NewsPage() {
       headline: "Mazda evolution retail store underway in Central Massachusetts",
       copy: "McCarty Companies began construction on a 22,000-square-foot Mazda Retail Evolution dealership for Patrick Motors on a 5.6-acre site in Auburn, Massachusetts. The design-build project includes complete civil site development, demolition of an existing 9,600-square-foot industrial structure, removal of foundations and utilities, and extensive earthwork totaling more than 75,000 cubic yards. The team also installed new storm-water drainage chambers, retaining walls, utility infrastructure, and paved areas for sales and service operations.",
       image: "/media/nar_4.jpg",
+      alt: "Site development and excavation work by McCarty Companies for the Mazda Retail Evolution dealership in Auburn, Massachusetts",
       link: "https://mccartydb.com/wp-content/uploads/2020/02/NEC-November-2019-Article.pdf",
       imagePosition: "left"
     }
@@ -70,7 +75,7 @@ export default function NewsPage() {
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">News and Recognition</h1>
               <p className="text-xl md:text-2xl text-mccarty-light max-w-3xl mx-auto">
-                Industry recognition and project highlights showcasing McCarty Companies&apos; commitment to excellence in engineering and construction
+                Industry recognition and project highlights showcasing McCarty Companies&apos; work in civil engineering, construction, and site development.
               </p>
             </motion.div>
           </div>
@@ -118,7 +123,7 @@ function NewsSection({ item, index }: { item: NewsItem; index: number }) {
         <div className="absolute inset-0">
           <Image
             src={item.image}
-            alt={item.headline}
+            alt={item.alt}
             fill
             className="object-cover"
             priority={index === 0}

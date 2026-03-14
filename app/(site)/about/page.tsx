@@ -61,6 +61,15 @@ const teamMembers = [
     division: "Engineering"
   },
   {
+    id: 23,
+    name: "Sean Houssan",
+    title: "Landscape Designer",
+    image: "/media/Headshots/Patrick_Houssan.jpg",
+    imagePosition: "90% 40%",
+    bio: "Sean Houssan is a Landscape Designer who joined the company in late 2025. He holds a bachelor's degree in Landscape Architecture from the University of Connecticut, where he developed a strong foundation in landscape design, site planning, and environmental principles. Sean approaches each project with a thoughtful and creative mindset, valuing both functionality and aesthetics. His attention to detail and commitment to quality allow him to produce designs that are not only visually compelling but also practical and responsive to the surrounding environment.\n\nSean's passion for design began through hands-on experience, working on small projects around his home, where he discovered a love for transforming ideas into tangible spaces. He takes great pride in the process of putting concepts on paper and watching them come to life through careful planning and collaboration.\n\nOutside of work, Sean enjoys spending time outdoors, particularly hiking and golfing, activities that continually inspire his appreciation for natural landscapes and inform his approach to design.",
+    division: "Engineering"
+  },
+  {
     id: 7,
     name: "Michael Langelier",
     title: "Project Superintendent/Estimator",
@@ -202,15 +211,6 @@ const teamMembers = [
     imagePosition: "22% 49%",
     bio: "Robert D'Onfro serves as Site Foreman at McCarty Associates, bringing expertise in field operations and crew management to ensure projects are executed safely and efficiently.",
     division: "Construction"
-  },
-  {
-    id: 23,
-    name: "Patrick Houssan",
-    title: "Landscape Architect 1",
-    image: "/media/Headshots/Patrick_Houssan.jpg",
-    imagePosition: "70% 40%",
-    bio: "",
-    division: "Engineering"
   },
   {
     id: 24,

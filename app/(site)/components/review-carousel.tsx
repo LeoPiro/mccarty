@@ -17,20 +17,22 @@ export function ReviewCarousel() {
 
   return (
     <div className="relative max-w-3xl mx-auto" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.4 }}
-            className="text-center"
-        >
+      <div className="min-h-[160px] flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+              className="text-center"
+          >
           <p className="text-lg md:text-xl font-medium leading-relaxed text-mccarty-dark">&quot;{current.quote}&quot;</p>
           <div className="mt-4 text-sm font-semibold text-mccarty-dark">{current.author}</div>
           {current.roleOrCompany && <div className="text-xs mt-1 text-mccarty-medium">{current.roleOrCompany}</div>}
-        </motion.div>
-      </AnimatePresence>
+          </motion.div>
+        </AnimatePresence>
+      </div>
       <div className="flex items-center justify-center gap-3 mt-8">
         {reviews.map((_, i) => (
           <button

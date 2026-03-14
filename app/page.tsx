@@ -14,11 +14,11 @@ export const dynamic = 'force-dynamic';
 export default function Home() {
   const capabilityData = [
     { 
-      title: "Site inspections", 
+      title: "Site inspections",
       body: "Comprehensive site evaluations and inspections to ensure compliance and quality throughout every phase of your project.",
       backgroundImage: "/media/site inspections.jpg",
-      link: "/associates",
-      buttonText: "McCarty Associates"
+      link: "/engineering",
+      buttonText: "McCarty Engineering"
     },
     { 
       title: "Project management", 
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6 py-8">
             <div className="text-center mb-6">
               <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark">Services</h2>
-              <p className="mt-4 text-xl text-mccarty-medium">Engineering excellence meets construction precision for infrastructure that stands the test of time</p>
+              <p className="mt-4 text-xl text-mccarty-medium">Engineering excellence meets construction precision for infrastructure that stands the test of time. Through our two divisions — McCarty Engineering and McCarty Associates — we provide comprehensive commercial construction and site development services across Massachusetts and New England.</p>
             </div>
           </div>
           <ServicesOverlay services={capabilityData} />
@@ -118,11 +118,12 @@ export default function Home() {
         </section>
 
         <section className="px-4 py-8">
-          <div className="rounded-2xl bg-mccarty-dark text-white p-12 md:p-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-semibold text-balance">Ready to start your project?</h2>
+          <div className="rounded-2xl bg-mccarty-dark text-white p-12 md:p-16 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex-1">
+              <h2 className="text-4xl md:text-5xl font-semibold text-balance">Ready to bring your project to life?</h2>
+              <p className="mt-4 text-lg text-white/80">From civil engineering and permitting through construction management and final fit-out, McCarty Companies delivers integrated solutions for complex commercial developments across New England.</p>
             </div>
-            <Link href="/contact" className="self-start rounded-md bg-white text-mccarty-dark px-8 py-4 font-medium text-base hover:bg-mccarty-light transition-colors">Contact us</Link>
+            <Link href="/contact" className="self-start md:self-center flex-shrink-0 rounded-md bg-white text-mccarty-dark px-8 py-4 font-medium text-base hover:bg-mccarty-light transition-colors">Start your project</Link>
           </div>
         </section>
       </main>

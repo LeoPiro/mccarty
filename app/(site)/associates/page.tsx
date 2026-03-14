@@ -25,7 +25,7 @@ export default function AssociatesPage() {
       <Header />
       <main className="pt-16">
         {/* Hero Video Section */}
-        <section className="relative h-[70vh] w-full overflow-hidden">
+        <section className="relative h-[70vh] w-full overflow-hidden" aria-label="Commercial site development and excavation project performed by McCarty Associates construction team">
           {canPlay ? (
             <video
               className="absolute inset-0 h-full w-full object-cover"
@@ -46,8 +46,8 @@ export default function AssociatesPage() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-start justify-end px-6 pb-16 text-white"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">McCarty Associates</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl">Comprehensive construction and site development services</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">McCarty Associates – Construction Management &amp; Site Development Services</h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl">Delivering construction expertise from site development to final build.</p>
             
             {/* Navigation Buttons */}
             <div className="flex flex-wrap gap-4">
@@ -82,7 +82,7 @@ export default function AssociatesPage() {
         {/* Intro Section */}
         <section className="mx-auto max-w-4xl px-6 py-16">
           <p className="text-lg leading-relaxed text-mccarty-medium">
-            McCarty Associates provides complete construction management, site development and project oversight services for commercial, industrial and municipal clients. From initial inspection to project completion, our team delivers the precision, accountability, and efficiency needed to keep complex developments on track — all under one integrated partner. McCarty Associates works hand-in-hand with McCarty Engineering to ensure each project moves seamlessly from design through construction — under one coordinated team.
+            McCarty Associates provides complete construction management, site development, and project oversight services for commercial, industrial, and municipal clients. From initial inspection to project completion, our team delivers the precision, accountability, and efficiency needed to keep complex developments on track. As the construction division of McCarty Companies, McCarty Associates works closely with McCarty Engineering to ensure each project moves seamlessly from civil design and permitting through construction—under one coordinated team.
           </p>
         </section>
 
@@ -106,7 +106,7 @@ export default function AssociatesPage() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/media/site inspections.jpg"
-                  alt="Construction site inspection professional"
+                  alt="Large-scale construction site inspection and earthwork evaluation by McCarty Associates"
                   fill
                   className="object-cover"
                 />
@@ -122,7 +122,7 @@ export default function AssociatesPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Project management</h2>
               <p className="text-lg leading-relaxed text-mccarty-medium max-w-4xl mx-auto">
-                Project management services extend far beyond simple scheduling. McCarty Associates embody dedicated client advocacy, robust financial stewardship, and proactive regulatory risk mitigation.
+                Project management services extend far beyond simple scheduling. McCarty Associates provides dedicated client advocacy, financial stewardship, and proactive regulatory risk mitigation.
               </p>
             </div>
             
@@ -148,7 +148,7 @@ export default function AssociatesPage() {
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-mccarty-dark mb-4">Project remediation and recovery consultation</h3>
                 <p className="text-lg leading-relaxed text-mccarty-medium">
-                  When projects experience delays, contractor default, or quality concerns, our remediation experts step in to assess and recover work efficiently. We conduct on-site evaluations, review plans and contracts, and prepare cost-to-complete analysis that guide next steps. Through detailed monitoring, daily reporting, and progress validation, we restore control, manage cost recovery, and help owners bring challenged projects to successful completion.
+                  When projects experience delays, contractor default, or quality concerns, our remediation experts step in to assess and recover work efficiently. We conduct on-site evaluations, review plans and contracts, and prepare cost-to-complete analysis that guides next steps. Through detailed monitoring, daily reporting, and progress validation, we restore control, manage cost recovery, and help owners bring challenged projects to successful completion.
                 </p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function AssociatesPage() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/media/excavator_mccarty.png"
-                  alt="McCarty excavator"
+                  alt="Commercial site development planning and infrastructure preparation by McCarty Associates"
                   fill
                   className="object-cover"
                 />
@@ -174,7 +174,7 @@ export default function AssociatesPage() {
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Site development</h2>
                 <p className="text-lg leading-relaxed text-mccarty-medium">
-                  Preparing a site for construction demands technical experience, environmental sensitivity and precise execution. Our site development services cover every aspect of pre-construction work, managing everything from early clearing and grading to final paving and utility installation. Each phase is coordinated to ensure compliance with local, state and federal regulations.
+                  Preparing a site for construction requires technical expertise, environmental sensitivity, and precise execution. McCarty Associates provides comprehensive site development services covering every aspect of pre-construction work, managing everything from early clearing and grading to final paving and utility installation. Each phase is coordinated to ensure compliance with local, state and federal regulations.
                 </p>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function AssociatesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative w-full h-[600px] overflow-hidden">
+        <section className="relative w-full h-[600px] overflow-hidden" aria-label="Civil engineering site development plans prepared by McCarty Engineering for commercial construction">
           {/* Full Width Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-pan"

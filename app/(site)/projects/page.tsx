@@ -11,6 +11,7 @@ interface Project {
   category: string;
   location: string;
   image: string;
+  alt: string;
   link?: string;
 }
 
@@ -18,11 +19,12 @@ export default function OurWorkPage() {
   const projects: Project[] = [
     {
       id: "werfern",
-      title: "Werfern pharmaceutical warehouse",
+      title: "Werfen Pharmaceutical Warehouse",
       category: "Industrial",
       location: "Devens, Massachusetts",
       image: "/media/werfern exterior.jpg",
-      link: "/projects/werfern"
+      alt: "Pharmaceutical warehouse and distribution facility constructed in Devens, Massachusetts",
+      link: "/projects/pharmaceutical-distribution-facility-devens-ma"
     },
     {
       id: "boston-lawnmower",
@@ -30,15 +32,17 @@ export default function OurWorkPage() {
       category: "Retail",
       location: "Westborough, Massachusetts",
       image: "/media/projects/boston-lawnmower/exterior.jpg",
-      link: "/projects/boston-lawnmower"
+      alt: "Retail power equipment dealership constructed in Westborough, Massachusetts",
+      link: "/projects/power-equipment-dealership-construction-westborough-ma"
     },
     {
       id: "gerrity-stone",
-      title: "Gerrity Stone fabrication facility",
+      title: "Gerrity Stone Fabrication Facility",
       category: "Industrial",
       location: "Wilmington, Massachusetts",
       image: "/media/projects/gerrity-stone/overview.jpg",
-      link: "/projects/gerrity-stone"
+      alt: "Stone fabrication and showroom facility in Wilmington, Massachusetts",
+      link: "/projects/stone-fabrication-facility-construction-wilmington-ma"
     },
     {
       id: "patrick-motor-group",
@@ -46,7 +50,8 @@ export default function OurWorkPage() {
       category: "Automotive",
       location: "Auburn, Massachusetts",
       image: "/media/projects/patrick-motor/auburn-drone.webp",
-      link: "/projects/patrick-motor-group"
+      alt: "Automotive dealership construction project for Patrick Motor Group in Auburn, Massachusetts",
+      link: "/projects/automotive-dealership-construction-auburn-ma"
     },
     {
       id: "smc",
@@ -54,7 +59,8 @@ export default function OurWorkPage() {
       category: "Manufacturing",
       location: "Devens, Massachusetts",
       image: "/media/projects/smc/window.jpg",
-      link: "/projects/smc"
+      alt: "Advanced manufacturing facility and cleanroom production space in Devens, Massachusetts",
+      link: "/projects/cleanroom-manufacturing-facility-devens-ma"
     }
   ];
 
@@ -71,7 +77,7 @@ export default function OurWorkPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">Our Work</h1>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6">Construction and Engineering Projects Across New England</h1>
               <p className="text-xl md:text-2xl text-mccarty-light max-w-3xl mx-auto">
                 Building excellence across New England through integrated engineering and construction solutions
               </p>
@@ -133,7 +139,7 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="absolute inset-0">
         <Image
           src={project.image}
-          alt={project.title}
+          alt={project.alt}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />

@@ -25,7 +25,7 @@ export default function EngineeringPage() {
       <Header />
       <main className="pt-16">
         {/* Hero Video Section */}
-        <section className="relative h-[70vh] w-full overflow-hidden">
+        <section className="relative h-[70vh] w-full overflow-hidden" aria-label="McCarty Engineering civil engineering firm providing site design and development services in Massachusetts">
           {canPlay ? (
             <video
               className="absolute inset-0 h-full w-full object-cover"
@@ -46,7 +46,7 @@ export default function EngineeringPage() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-start justify-end px-6 pb-16 text-white"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">McCarty Engineering</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">McCarty Engineering – Civil Engineering &amp; Site Development Services</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl">Building strong foundations for communities and businesses</p>
             
             {/* Navigation Buttons */}
@@ -82,7 +82,7 @@ export default function EngineeringPage() {
         {/* Intro Section */}
         <section className="mx-auto max-w-4xl px-6 py-16">
           <p className="text-lg leading-relaxed text-mccarty-medium">
-            McCarty Engineering provides complete civil design, permitting, and construction support services for commercial, industrial, and residential development projects of every scale. Working in tandem with McCarty Associates, McCarty Engineering forms the design foundation of our integrated, end-to-end project delivery model. From site evaluation to final inspection, our engineers bring technical precision, environmental responsibility, and practical insight to every project—helping clients navigate complex regulations and move confidently from concept to completion.
+            McCarty Engineering, a division of McCarty Companies, provides complete civil design, permitting, and construction support services for commercial, industrial, and residential development projects throughout Massachusetts and New England.
           </p>
         </section>
 
@@ -95,7 +95,7 @@ export default function EngineeringPage() {
                 <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Civil engineering design</h2>
                 <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
                   <p>
-                    Our engineers develop efficient, code-compliant site plans that balance functionality, cost, and sustainability. Every design considers grading, drainage, access, and infrastructure to ensure safe and durable outcomes. Leveraging advanced CAD and modeling software, we produce highly accurate layouts that streamline permitting, reduce change orders and minimize construction delays.
+                    Our civil engineers develop efficient, code-compliant site plans that balance functionality, cost, and sustainability. Every design considers grading, drainage, access, and infrastructure to ensure safe and durable outcomes. Leveraging advanced CAD and modeling software, we produce highly accurate layouts that streamline permitting, reduce change orders, and minimize construction delays.
                   </p>
                   <p>
                     Each project begins with a comprehensive analysis of existing conditions including soil composition, utilities, and environmental features, allowing us to design systems that work with the land rather than against it. From parking lot layout to roadway alignment and stormwater management, our approach prioritizes reliability and constructability.
@@ -106,7 +106,7 @@ export default function EngineeringPage() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/media/civil engineering design.jpg"
-                  alt="Civil engineering design and blueprints"
+                  alt="Civil engineer reviewing site development plans at McCarty Engineering Massachusetts"
                   fill
                   className="object-cover"
                 />
@@ -123,7 +123,7 @@ export default function EngineeringPage() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/media/development-plans.jpg"
-                  alt="Development plans and site planning"
+                  alt="Civil engineering development plan showing roadway layout, drainage, and site infrastructure design"
                   fill
                   className="object-cover"
                 />
@@ -159,7 +159,7 @@ export default function EngineeringPage() {
                 <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Utility design</h2>
                 <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
                   <p>
-                    Reliable utilities are the backbone of every successful development. We design and coordinate complete water, sewer, and electrical systems that meet current codes and support future capacity needs. Each design accounts for site elevation, flow rates, and material specifications to ensure safe, efficient, and maintainable infrastructure.
+                    Reliable utility infrastructure is the backbone of every successful development. We design and coordinate complete water, sewer, and electrical systems that meet current codes and support future capacity needs. Each design accounts for site elevation, flow rates, and material specifications to ensure safe, efficient, and maintainable infrastructure.
                   </p>
                   <p>
                     Our team integrates utility layouts with site grading and roadway systems to prevent conflicts and simplify construction sequencing. Whether designing new service connections or upgrading existing infrastructure, we focus on long-term functionality, durability, and ease of maintenance.
@@ -170,7 +170,7 @@ export default function EngineeringPage() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/media/util_design_frompdf.png"
-                  alt="Utility infrastructure and civil works"
+                  alt="Civil engineering utility design layout showing water, sewer, and stormwater infrastructure planning"
                   fill
                   className="object-cover"
                 />
@@ -179,15 +179,54 @@ export default function EngineeringPage() {
           </div>
         </section>
 
+        {/* Landscape Architecture - Image on Left */}
+        <section id="landscape-architecture" className="bg-mccarty-light py-16">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image on Left */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Landscape architecture and site design"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Text on Right */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Landscape architecture</h2>
+                <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
+                  <p>
+                    Thoughtful landscape architecture enhances both the function and character of a development. Our team integrates site aesthetics with engineering performance, designing outdoor environments that are visually cohesive, environmentally responsible, and built to last.
+                  </p>
+                  <p>
+                    We develop landscape plans that complement site grading, stormwater systems, and circulation patterns while meeting local zoning and permitting requirements. From planting design and hardscape layouts to screening, lighting, and pedestrian spaces, each element is carefully coordinated to support long-term durability and ease of maintenance.
+                  </p>
+                  <p>Our landscape architecture services include:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Site planting and landscape design</li>
+                    <li>Hardscape design including walkways, plazas, and retaining elements</li>
+                    <li>Stormwater-integrated landscape solutions and green infrastructure</li>
+                    <li>Compliance with local landscaping and environmental regulations</li>
+                  </ul>
+                  <p>
+                    By collaborating closely with civil engineers, architects, and contractors, we ensure that landscape plans align seamlessly with overall site development goals. The result is an integrated outdoor environment that enhances usability, strengthens property value, and reflects the quality of the overall project.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Construction Monitoring - Image on Left */}
-        <section id="construction-monitoring" className="bg-mccarty-light py-16">
+        <section id="construction-monitoring" className="bg-white py-16">
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Image on Left */}
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/media/construction monitoring.JPG"
-                  alt="Construction monitoring and site inspection"
+                  alt="Construction monitoring and site inspection services provided by McCarty Engineering"
                   fill
                   className="object-cover"
                 />
@@ -209,7 +248,7 @@ export default function EngineeringPage() {
         </section>
 
         {/* CTA Section - Video Background with Overlay */}
-        <section className="relative w-full h-[600px] overflow-hidden">
+        <section className="relative w-full h-[600px] overflow-hidden" aria-label="Commercial site development and excavation project by McCarty Associates, part of McCarty Companies">
           {/* Full Width Background Video */}
           <video
             className="absolute inset-0 h-full w-full object-cover object-bottom"
@@ -228,7 +267,7 @@ export default function EngineeringPage() {
                   From plans to performance
                 </h3>
                 <p className="text-sm md:text-base leading-relaxed text-white/90">
-                  McCarty Associates transforms our engineering designs into finished spaces through integrated construction management and site development expertise
+                  McCarty Associates transforms our engineering designs into finished spaces through integrated construction management and site development expertise.
                 </p>
                 <a href="/associates" className="mt-4 inline-block px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold uppercase text-sm transition-colors duration-200">
                   Explore our construction management capabilities with McCarty Associates →

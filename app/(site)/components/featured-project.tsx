@@ -10,7 +10,7 @@ export function FeaturedProject() {
       </div>
       
       <div className="relative group w-full">
-        <Link href="/projects/werfern" className="block">
+        <Link href="/projects/pharmaceutical-distribution-facility-devens-ma" className="block">
           <div className="relative h-[600px] overflow-hidden w-full">
             <Image
               src="/Recent work.jpg"
@@ -32,7 +32,7 @@ export function FeaturedProject() {
                   Pharmaceutical distribution facility
                 </h3>
                 <p className="text-mccarty-dark mb-4">
-                  A state-of-the-art pharmaceutical distribution facility in Devens with full climate control, 45&apos; clear height, and a 30,000 SF walk-in cooler — built with over 1,300 tons of steel, 7,200 cubic yards of concrete, and 90,000 cubic yards of historic fill moved and compacted.
+                  A state-of-the-art pharmaceutical distribution facility in Devens with full climate control, 45&apos; clear height, and a 30,000 SF walk-in cooler — built with over 1,300 tons of steel, 7,200 cubic yards of concrete, and 90,000 cubic yards of material moved and compacted.
                 </p>
                 <div className="flex items-center text-sm text-mccarty-dark space-x-4">
                   <span>Devens, MA</span>
