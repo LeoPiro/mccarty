@@ -53,25 +53,31 @@ export default function EngineeringPage() {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => scrollToSection('civil-design')}
-                className="px-6 py-3 bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
+                className="px-4 py-2 text-sm bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
               >
                 Civil engineering
               </button>
               <button
                 onClick={() => scrollToSection('development-plans')}
-                className="px-6 py-3 bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
+                className="px-4 py-2 text-sm bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
               >
                 Development plans
               </button>
               <button
                 onClick={() => scrollToSection('utility-design')}
-                className="px-6 py-3 bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
+                className="px-4 py-2 text-sm bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
               >
                 Utility design
               </button>
               <button
+                onClick={() => scrollToSection('landscape-architecture')}
+                className="px-4 py-2 text-sm bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
+              >
+                Landscape architecture
+              </button>
+              <button
                 onClick={() => scrollToSection('construction-monitoring')}
-                className="px-6 py-3 bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
+                className="px-4 py-2 text-sm bg-white/90 hover:bg-white text-mccarty-dark font-semibold rounded-md transition-colors"
               >
                 Construction monitoring
               </button>

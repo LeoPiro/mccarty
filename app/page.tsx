@@ -31,10 +31,10 @@ export default function Home() {
       title: "Landscape architecture", 
       body: "Thoughtful landscape design and planning that enhances aesthetics while meeting regulatory requirements and environmental goals.",
       backgroundImage: "https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "/associates",
-      buttonText: "McCarty Associates"
+      link: "/engineering",
+      buttonText: "McCarty Engineering"
     },
-    { 
+    {
       title: "Civil engineering design", 
       body: "Expert civil engineering solutions for site development, infrastructure, and utilities tailored to your project needs.",
       backgroundImage: "/media/civil engineering design.jpg",

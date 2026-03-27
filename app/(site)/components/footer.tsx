@@ -14,7 +14,13 @@ export function Footer() {
               href="tel:+19785348727"
               className="text-sm hover:text-mccarty-medium transition-colors"
             >
-              978-534-8727
+              McCarty Associates: 978-534-8727
+            </a>
+            <a
+              href="tel:+19785341318"
+              className="text-sm hover:text-mccarty-medium transition-colors"
+            >
+              McCarty Engineering: 978-534-1318
             </a>
             <div className="text-sm">
               42 Tucker Drive, Leominster, MA 01453
@@ -40,7 +46,7 @@ export function Footer() {
           {/* Right Side - Social Media Links */}
           <div className="flex gap-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/McCartyCompanies/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-light hover:bg-mccarty-dark hover:text-white transition-colors text-mccarty-dark"
@@ -49,7 +55,7 @@ export function Footer() {
               <Facebook className="h-5 w-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/mccartycompanies/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-light hover:bg-mccarty-dark hover:text-white transition-colors text-mccarty-dark"
@@ -58,7 +64,7 @@ export function Footer() {
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/mccarty-companies"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-mccarty-light hover:bg-mccarty-dark hover:text-white transition-colors text-mccarty-dark"

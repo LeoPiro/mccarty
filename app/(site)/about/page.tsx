@@ -91,7 +91,8 @@ const teamMembers = [
     id: 9,
     name: "Jessica McCarty",
     title: "Treasurer",
-    image: "https://ui-avatars.com/api/?name=Jessica+McCarty&size=400&background=2c2c2c&color=fff",
+    image: "/media/Headshots/Jessica_McCarty.jpg",
+    imagePosition: "75% center",
     bio: "Jessica McCarty serves as Treasurer of McCarty Companies, overseeing financial operations and strategic planning. Her dedication to excellence and attention to detail ensure the company's continued growth and success.",
     division: "Leadership"
   },
@@ -201,6 +202,22 @@ const teamMembers = [
     image: "/media/Headshots/William_Soar_III.jpg",
     imagePosition: "10% 49%",
     bio: "William Soar III is an experienced Operator at McCarty Associates, providing skilled equipment operation for site development and construction projects.",
+    division: "Construction"
+  },
+  {
+    id: 27,
+    name: "Christopher Mullins",
+    title: "Operator",
+    image: "/media/Headshots/Christopher_Mullins.jpg",
+    bio: "Christopher Mullins is an experienced Operator at McCarty Associates, providing skilled equipment operation for site development and construction projects.",
+    division: "Construction"
+  },
+  {
+    id: 28,
+    name: "Thomas Gerolomo",
+    title: "Operator",
+    image: "/media/Headshots/Thomas_Gerolomo.jpg",
+    bio: "Thomas Gerolomo is an experienced Operator at McCarty Associates, providing skilled equipment operation for site development and construction projects.",
     division: "Construction"
   },
   {

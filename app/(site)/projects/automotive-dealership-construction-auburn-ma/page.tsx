@@ -26,16 +26,10 @@ export default function PatrickMotorGroupPage() {
   ];
 
   const volvoImages = [
-    { src: "/media/projects/patrick-motor/volvo-drone.webp", alt: "Patrick Volvo aerial view" },
-    { src: "/media/projects/patrick-motor/volvo-exterior.webp", alt: "Patrick Volvo exterior" },
-    { src: "/media/projects/patrick-motor/volvo-night.webp", alt: "Patrick Volvo exterior at night" },
-    { src: "/media/projects/patrick-motor/volvo-night-2.webp", alt: "Patrick Volvo night view" },
-    { src: "/media/projects/patrick-motor/volvo-interior.webp", alt: "Patrick Volvo showroom" },
-    { src: "/media/projects/patrick-motor/volvo-interior-2.webp", alt: "Patrick Volvo interior" },
-    { src: "/media/projects/patrick-motor/volvo-interior-3.webp", alt: "Patrick Volvo lounge" },
-    { src: "/media/projects/patrick-motor/volvo-reception.webp", alt: "Patrick Volvo reception" },
-    { src: "/media/projects/patrick-motor/volvo-chairs.webp", alt: "Patrick Volvo waiting area" },
-    { src: "/media/projects/patrick-motor/volvo-service.webp", alt: "Patrick Volvo service bays" },
+    { src: "/media/projects/patrick-motor/volvo-service-bay.jpg", alt: "Volvo dealership service bay with vehicle lifts, service equipment, and open workspace designed for automotive maintenance" },
+    { src: "/media/projects/patrick-motor/volvo-exterior-new.jpg", alt: "Exterior view of newly constructed Volvo dealership with modern glass façade, branded signage, and customer parking area" },
+    { src: "/media/projects/patrick-motor/volvo-overhead.jpg", alt: "Overhead view of Volvo dealership showing full site layout including building footprint, parking areas, and surrounding property" },
+    { src: "/media/projects/patrick-motor/volvo-side-landscape.jpg", alt: "Side view of Volvo dealership featuring landscaped grounds, clean site design, and building exterior details" },
   ];
 
   return (
@@ -283,8 +277,8 @@ export default function PatrickMotorGroupPage() {
           </div>
         </section>
 
-        {/* Volvo Image Slider - temporarily disabled, low quality images */}
-        {/* <ImageSlider images={volvoImages} /> */}
+        {/* Volvo Image Slider */}
+        <ImageSlider images={volvoImages} />
 
         {/* ── Patrick Recon Facility Section ── */}
 
