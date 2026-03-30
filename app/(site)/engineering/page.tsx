@@ -224,20 +224,11 @@ export default function EngineeringPage() {
           </div>
         </section>
 
-        {/* Construction Monitoring - Image on Left */}
+        {/* Construction Monitoring - Text on Left, Image on Right */}
         <section id="construction-monitoring" className="bg-white py-16">
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Image on Left */}
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/media/construction monitoring.JPG"
-                  alt="Construction monitoring and site inspection services provided by McCarty Engineering"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* Text on Right */}
+              {/* Text on Left */}
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-mccarty-dark mb-6">Construction monitoring</h2>
                 <div className="space-y-6 text-lg leading-relaxed text-mccarty-medium">
@@ -248,6 +239,15 @@ export default function EngineeringPage() {
                     By maintaining open communication with contractors and owners, we ensure any design clarifications are addressed quickly to keep the project moving forward. This consistent oversight helps maintain quality control, protect the owner&apos;s investment, and deliver projects that meet every regulatory and technical requirement.
                   </p>
                 </div>
+              </div>
+              {/* Image on Right */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/media/construction monitoring.JPG"
+                  alt="Construction monitoring and site inspection services provided by McCarty Engineering"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

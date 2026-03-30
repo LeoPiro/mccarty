@@ -118,7 +118,7 @@ export default function Home() {
         </section>
 
         <section className="px-4 py-8">
-          <div className="rounded-2xl bg-mccarty-dark text-white p-12 md:p-16 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="rounded-2xl bg-mccarty-dark text-white p-12 md:p-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
             <div className="flex-1">
               <h2 className="text-4xl md:text-5xl font-semibold text-balance">Ready to bring your project to life?</h2>
               <p className="mt-4 text-lg text-white/80">From civil engineering and permitting through construction management and final fit-out, McCarty Companies delivers integrated solutions for complex commercial developments across New England.</p>
